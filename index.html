@@ -1,310 +1,452 @@
 <!DOCTYPE html>
 <html>
-	<head>
 
-		<!-- Basic -->
-		<meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">	
-
-		<title>Mentor A Friend</title>	
-
-		<meta name="keywords" content="Mentor A Friend" />
-		<meta name="description" content="Mentor A Friend">
-		<meta name="author" content="tinhoc@outlook.com">
-
-		<!-- Favicon -->
-		<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
-		<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
-
-		<!-- Mobile Metas -->
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-		<!-- Web Fonts  -->
-		<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800%7CShadows+Into+Light" rel="stylesheet" type="text/css">
-
-		<!-- Vendor CSS -->
-		<link rel="stylesheet" href="vendor/bootstrap/bootstrap.css">
-		<link rel="stylesheet" href="vendor/fontawesome/css/font-awesome.css">
-		<link rel="stylesheet" href="vendor/owlcarousel/owl.carousel.min.css" media="screen">
-		<link rel="stylesheet" href="vendor/owlcarousel/owl.theme.default.min.css" media="screen">
-		<link rel="stylesheet" href="vendor/magnific-popup/magnific-popup.css" media="screen">
-
-		<!-- Theme CSS -->
-		<link rel="stylesheet" href="css/theme.css">
-		<link rel="stylesheet" href="css/theme-elements.css">
-		<link rel="stylesheet" href="css/theme-blog.css">
-		<link rel="stylesheet" href="css/theme-shop.css">
-		<link rel="stylesheet" href="css/theme-animate.css">
-
-		<!-- Current Page CSS -->
-		<link rel="stylesheet" href="vendor/rs-plugin/css/settings.css" media="screen">
-		<link rel="stylesheet" href="vendor/circle-flip-slideshow/css/component.css" media="screen">
-
-		<!-- Skin CSS -->
-		<link rel="stylesheet" href="css/skins/default.css">
-
-		<!-- Theme Custom CSS -->
-		<link rel="stylesheet" href="css/custom.css">
-
-		<!-- Head Libs -->
-		<script src="vendor/modernizr/modernizr.js"></script>
-
-		<!--[if IE]>
+<head>
+    <!-- Basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Mentor A Friend</title>
+    <meta name="keywords" content="Mentor A Friend" />
+    <meta name="description" content="Mentor A Friend">
+    <meta name="author" content="tinhoc@outlook.com">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Web Fonts  -->
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800%7CShadows+Into+Light" rel="stylesheet" type="text/css">
+    <!-- Vendor CSS -->
+    <link rel="stylesheet" href="vendor/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="vendor/fontawesome/css/font-awesome.css">
+    <link rel="stylesheet" href="vendor/owlcarousel/owl.carousel.min.css" media="screen">
+    <link rel="stylesheet" href="vendor/owlcarousel/owl.theme.default.min.css" media="screen">
+    <link rel="stylesheet" href="vendor/magnific-popup/magnific-popup.css" media="screen">
+    <!-- Theme CSS -->
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/theme-elements.css">
+    <link rel="stylesheet" href="css/theme-blog.css">
+    <link rel="stylesheet" href="css/theme-shop.css">
+    <link rel="stylesheet" href="css/theme-animate.css">
+    <!-- Current Page CSS -->
+    <link rel="stylesheet" href="vendor/rs-plugin/css/settings.css" media="screen">
+    <link rel="stylesheet" href="vendor/circle-flip-slideshow/css/component.css" media="screen">
+    <!-- Skin CSS -->
+    <link rel="stylesheet" href="css/skins/default.css">
+    <!-- Theme Custom CSS -->
+    <link rel="stylesheet" href="css/custom.css">
+    <!-- Head Libs -->
+    <script src="vendor/modernizr/modernizr.js"></script>
+    <!--[if IE]>
 			<link rel="stylesheet" href="css/ie.css">
 		<![endif]-->
-
-		<!--[if lte IE 8]>
+    <!--[if lte IE 8]>
 			<script src="vendor/respond/respond.js"></script>
 			<script src="vendor/excanvas/excanvas.js"></script>
 		<![endif]-->
+</head>
 
-	</head>
-	<body>
-		<div class="body">
-			<header id="header">
-				<div class="container">
-					<div class="logo">
-						<a href="index.html">
-							<img alt="" width="250" height="50" data-sticky-width="200" data-sticky-height="40" src="img/logo.png"> 
-						</a>
-					</div>
-					<div class="search">
-						<form id="searchForm" action="page-search-results.html" method="get">
-							<div class="input-group">
-								<input type="text" class="form-control search" name="q" id="q" placeholder="Search..." required>
-								<span class="input-group-btn">
+<body>
+    <div class="body">
+        <header id="header">
+            <div class="container">
+                <div class="logo">
+                    <a href="index.html">
+                        <img alt="" width="250" height="50" data-sticky-width="200" data-sticky-height="40" src="img/logo.png">
+                    </a>
+                </div>
+                <div class="search">
+                    <form id="searchForm" action="page-search-results.html" method="get">
+                        <div class="input-group">
+                            <input type="text" class="form-control search" name="q" id="q" placeholder="Search..." required>
+                            <span class="input-group-btn">
 									<button class="btn btn-default" type="submit"><i class="fa fa-search"></i></button>
 								</span>
-							</div>
-						</form>
-					</div>
-					<nav class="nav-top">
-						<ul class="nav nav-pills nav-top">
-							<li>
-								<a href="about-us.html" ><i class="fa fa-angle-right"></i>About Us</a>
-							</li>
-							<li>
-								<a href="contact-us.html"><i class="fa fa-angle-right"></i>Contact Us</a>
-							</li>
-						</ul>
-					</nav>
-					<button class="btn btn-responsive-nav btn-inverse" data-toggle="collapse" data-target=".nav-main-collapse">
-						<i class="fa fa-bars"></i>
-					</button>
-				</div>
-				<div class="navbar-collapse nav-main-collapse collapse">
-					<div class="container">
-						<ul class="social-icons">
-							<li class="facebook"><a href="http://www.facebook.com/" target="_blank" title="Facebook">Facebook</a></li>
-							<li class="twitter"><a href="http://www.twitter.com/" target="_blank" title="Twitter">Twitter</a></li>
-							<li class="linkedin"><a href="http://www.linkedin.com/" target="_blank" title="Linkedin">Linkedin</a></li>
-						</ul>
-						<nav class="nav-main mega-menu">
-							<ul class="nav nav-pills nav-main" id="mainMenu">
-								<li class="dropdown active">
-									<a class="" href="index.html">
+                        </div>
+                    </form>
+                </div>
+                <nav class="nav-top">
+                    <ul class="nav nav-pills nav-top">
+                        <li>
+                            <a href="about-us.html"><i class="fa fa-angle-right"></i>About Us</a>
+                        </li>
+                        <li>
+                            <a href="contact-us.html"><i class="fa fa-angle-right"></i>Contact Us</a>
+                        </li>
+                    </ul>
+                </nav>
+                <button class="btn btn-responsive-nav btn-inverse" data-toggle="collapse" data-target=".nav-main-collapse">
+                    <i class="fa fa-bars"></i>
+                </button>
+            </div>
+            <div class="navbar-collapse nav-main-collapse collapse">
+                <div class="container">
+                    <ul class="social-icons">
+                        <li class="facebook"><a href="http://www.facebook.com/" target="_blank" title="Facebook">Facebook</a></li>
+                        <li class="twitter"><a href="http://www.twitter.com/" target="_blank" title="Twitter">Twitter</a></li>
+                        <li class="linkedin"><a href="http://www.linkedin.com/" target="_blank" title="Linkedin">Linkedin</a></li>
+                    </ul>
+                    <nav class="nav-main mega-menu">
+                        <ul class="nav nav-pills nav-main" id="mainMenu">
+                            <li class="dropdown active">
+                                <a class="" href="index.html">
 										Home
 									</a>
-									
-								</li>
-								<li class="dropdown ">
-									<a class="" href="/mentor-register.html">
+                            </li>
+                            <li class="dropdown ">
+                                <a class="dropdown-toggle" href="index.html">
+										Services
+									</a>
+                                <ul class="dropdown-menu">
+                                    <li class="dropdown-submenu">
+                                        <a href="#">Career</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#">Tax & Accounting</a></li>
+                                            <li><a href="#">Account Payable, Receivable and Collection</a></li>
+                                            <li><a href="#">Financial Product Sales, Insurance and Brokerage</a></li>
+                                            <li><a href="#">Corporate Finance and Accounting</a></li>
+                                            <li><a href="#">Real Estate Leasing and Acquisition</a></li>
+                                            <li><a href="#">Banking, Finance & Investment</a></li>
+                                            <li><a href="#">Payroll, Benefits & Compensation</a></li>
+                                            <li><a href="#">Recruiting and Sourcing</a></li>
+                                            <li><a href="#">Human Resource General</a></li>
+                                            <li><a href="#">Attorney/ Legal Cousel</a></li>
+                                            <li><a href="#">Paralegal, Legal ecretary, and Real Estate Law</a></li>
+                                            <li><a href="#">Brand and Product Marketing</a></li>
+                                            <li><a href="#">Advertising and Public Relations</a></li>
+                                            <li><a href="#">Digital/eMarketing</a></li>
+                                            <li><a href="#">Direct Marketing</a></li>
+                                            <li><a href="#">Call Center and Technical Customer Support</a></li>
+                                            <li><a href="#">Field Sales and inside Sales</a></li>
+                                            <li><a href="#">Real Estate Agent and Broker</a></li>
+                                            <li><a href="#">Financial Product Sales, Insurance and Brokerage</a></li>
+                                            <li><a href="#">Reservation, Ticketing  and Retail</a></li>
+                                            <li><a href="#">Call Center and Technical Customer Support</a></li>
+                                            <li><a href="#">Retail and Counter Sales</a></li>
+                                            <li><a href="#">Enterprise Software Implementation & Consulting</a></li>
+                                            <li><a href="#">Software, UI and Web Development</a></li>
+                                            <li><a href="#">Database Development and Administration</a></li>
+                                            <li><a href="#">Desktop Services and Support</a></li>
+                                            <li><a href="#">Computer Network, Security and Server Adminsitration</a></li>
+                                            <li><a href="#">Project Management and Solution Architecture</a></li>
+                                            <li><a href="#">General Other IT</a></li>
+                                            <li><a href="#">Filing and Records Management</a></li>
+                                            <li><a href="#">Office and Property Management</a></li>
+                                            <li><a href="#">Secretary and Executive Assistance</a></li>
+                                            <li><a href="#">Data Entry and Order Processing</a></li>
+                                            <li><a href="#">General, Other - Administrative and Clerical</a></li>
+                                            <li><a href="#">Electrician, wire and Cable Install</a></li>
+                                            <li><a href="#">HVAC</a></li>
+                                            <li><a href="#">Plumbing and Pipefitting</a></li>
+                                            <li><a href="#">Carpentry and Framing</a></li>
+                                            <li><a href="#">Concrete And Masonary</a></li>
+                                            <li><a href="#">Roofing, Flooring, Tiling, and Painting</a></li>
+                                            <li><a href="#">Auto Repair and Maintanance</a></li>
+                                            <li><a href="#">Janitorial and Cleaning</a></li>
+                                            <li><a href="#">Equipment, Ironwork, Maintenance and Repair</a></li>
+                                            <li><a href="#">General, Other</a></li>
+                                            <li><a href="#">Dental</a></li>
+                                            <li><a href="#">Pharmacy, Laboratory and Pathology</a></li>
+                                            <li><a href="#">Medical Therapy and Rehab Services</a></li>
+                                            <li><a href="#">Medical Practitioner and Nursing</a></li>
+                                            <li><a href="#">Optical</a></li>
+                                            <li><a href="#">Nutrition and Diet</a></li>
+                                            <li><a href="#">Fitness </a></li>
+                                            <li><a href="#">Sports</a></li>
+                                            <li><a href="#">Software and Web Training</a></li>
+                                            <li><a href="#">School Classroom Teaching</a></li>
+                                            <li><a href="#">Early Childhood Care and Development</a></li>
+                                            <li><a href="#">Corporate Development and Training</a></li>
+                                            <li><a href="#">College and University Teaching</a></li>
+                                            <li><a href="#">Food Prepearation and Cooking</a></li>
+                                            <li><a href="#">Management, Front Desk and Reception</a></li>
+                                            <li><a href="#">Food and Beverage Serving</a></li>
+                                            <li><a href="#">General, Others</a></li>
+                                            <li><a href="#">Aeronautic and Avionic Engineering</a></li>
+                                            <li><a href="#">CAD, CAM and Drafting</a></li>
+                                            <li><a href="#">Chemical Engineering</a></li>
+                                            <li><a href="#">Civil and Structural Engineering</a></li>
+                                            <li><a href="#">Electrical and Electronics Engineering</a></li>
+                                            <li><a href="#">Environmental and Geological Engineer</a></li>
+                                            <li><a href="#">Industrial, Maufacturing and Mechanical Engineer</a></li>
+                                            <li><a href="#">General, Others</a></li>
+                                            <li><a href="#">Non-Profit  and Charity</a></li>
+                                            <li><a href="#">Truck Driving </a></li>
+                                            <li><a href="#">Car, Van, and Bus Driving</a></li>
+                                            <li><a href="#">Dispatch, Routing and Scheduling</a></li>
+                                            <li><a href="#">Receiving and Warehousing</a></li>
+                                            <li><a href="#">Equipment, Forklift and Crane Operator</a></li>
+                                            <li><a href="#">Writing/Editing/Language</a></li>
+                                            <li><a href="#">General Labor</a></li>
+                                            <li><a href="#">Hair Cutting & Styling</a></li>
+                                            <li><a href="#">Cosmetics and Beauty</a></li>
+                                            <li><a href="#">Assembly and Assembly Line</a></li>
+                                            <li><a href="#">Plant work</a></li>
+                                            <li><a href="#">Call Center and Technical Customer Support</a></li>
+                                            <li><a href="#">Reservation, Ticketing and Retail</a></li>
+                                            <li><a href="#">Research and Deveopment (All Fields)</a></li>
+                                            <li><a href="#">Airport Security and Screening</a></li>
+                                            <li><a href="#">Law Enforcement, Firefighting, and Rescue</a></li>
+                                            <li><a href="#">Music</a></li>
+                                            <li><a href="#">Films and Entertainment</a></li>
+                                            <li><a href="#">Architecture and Interior Design</a></li>
+                                            <li><a href="#">Animation and Multimedia</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown-submenu">
+                                        <a href="#">Business and Enterpreneurship</a>
+                                        <ul class="dropdown-menu"></ul>
+                                    </li>
+                                    <li class="dropdown-submenu">
+                                        <a href="#">Study and Reading</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#">Exams and Certifications</a></li>
+                                            <li><a href="#">Admissions</a></li>
+                                            <li><a href="#">Tutoring</a></li>
+                                            <li><a href="#">Foreign/International Students</a></li>
+                                            <li><a href="#">Language and Speech</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown-submenu">
+                                        <a href="#">Financial</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#">Foreign Exchange</a></li>
+                                            <li><a href="#">Stocks and Online Trading</a></li>
+                                            <li><a href="#">Tax and Accounting</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown-submenu">
+                                        <a href="#">Personal/Life</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#">Behavior and Manners</a></li>
+                                            <li><a href="#">Philosphy</a></li>
+                                            <li><a href="#">Psych</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown-submenu">
+                                        <a href="#">Health</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#">Diet</a></li>
+                                            <li><a href="#">Fitness and Yoga</a></li>
+                                            <li><a href="#">Beauty</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown-submenu">
+                                        <a href="#">Healthcare</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#">Childcare</a></li>
+                                            <li><a href="#">Senior Services</a></li>
+                                            <li><a href="#">Disabled/Special Needs</a></li>
+                                            <li><a href="#">Household Remedies</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown-submenu">
+                                        <a href="#">Sports</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#">InDoor Sports</a></li>
+                                            <li><a href="#">Outdoor Sports</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown-submenu">
+                                        <a href="#">Dating</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#">Kink</a></li>
+                                            <li><a href="#">Friendship</a></li>
+                                            <li><a href="#">Love</a></li>
+                                            <li><a href="#">Romance</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown-submenu">
+                                        <a href="#">Religion</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#">Athiest</a></li>
+                                            <li><a href="#">Spirit</a></li>
+                                            <li><a href="#">Organized Religion</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown-submenu">
+                                        <a href="#">Relationships/Marriage</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#">Divorce</a></li>
+                                            <li><a href="#">Abuse and Domestic Violence</a></li>
+                                            <li><a href="#">Marriage</a></li>
+                                            <li><a href="#">LGBT</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown-submenu">
+                                        <a href="#">Computer Services</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#">Software</a></li>
+                                            <li><a href="#">Hardware</a></li>
+                                            <li><a href="#">IT Training</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown-submenu">
+                                        <a href="#">Immigration and Legal Services</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#">Immigration</a></li>
+                                            <li><a href="#">Human Rights</a></li>
+                                            <li><a href="#">Legal Services</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown-submenu">
+                                        <a href="#">Charity and Volunteering</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#">Non-Profit Organizations</a></li>
+                                            <li><a href="#">Charity Events</a></li>
+                                            <li><a href="#">Donation</a></li>
+                                            <li><a href="#">Grants</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown-submenu">
+                                        <a href="#">Household</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#">Garden</a></li>
+                                            <li><a href="#">Moving and Storage</a></li>
+                                            <li><a href="#">Cleaning and Decoration</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown-submenu">
+                                        <a href="#">Auto/Bikes/Boats</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#">Bicycles</a></li>
+                                            <li><a href="#">Motorcycles</a></li>
+                                            <li><a href="#">Auto/Trucks</a></li>
+                                            <li><a href="#">Boats</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown-submenu">
+                                        <a href="#">Environment</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#">Ecofriendly/Green</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown-submenu">
+                                        <a href="#">Media/Music</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#">Music</a></li>
+                                            <li><a href="#">Films</a></li>
+                                            <li><a href="#">Gaming</a></li>
+                                            <li><a href="#">Video/Audio</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown-submenu">
+                                        <a href="#">Food</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#">Wine/Spirits</a></li>
+                                            <li><a href="#">Vegan</a></li>
+                                            <li><a href="#">Organic</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown-submenu">
+                                        <a href="#">Animals / Pets</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#">Pet Food</a></li>
+                                            <li><a href="#">Animal/Pet Services</a></li>
+                                            <li><a href="#">Supplies and Accessories</a></li>
+                                            <li><a href="#">Livestock</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown-submenu">
+                                        <a href="#">Parenting and Seniors</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#">Parenting</a></li>
+                                            <li><a href="#">Seniors/Old age</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown-submenu">
+                                        <a href="#">Leisure</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#">Photography</a></li>
+                                            <li><a href="#">Outdoor</a></li>
+                                            <li><a href="#">Events</a></li>
+                                            <li><a href="#">Travel/Vacations</a></li>
+                                            <li><a href="#">Wedding</a></li>
+                                            <li><a href="#">Antiques & Collectibles</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown-submenu">
+                                        <a href="#">Housing</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#">Bur or sell House/Land</a></li>
+                                            <li><a href="#">Rentals</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown ">
+                                <a class="" href="/mentor-register.html">
 										Registration
 									</a>
-								</li>
-								<li class="dropdown ">
-									<a class="" href="login.html">
+                            </li>
+                            <li class="dropdown ">
+                                <a class="" href="login.html">
 										Login
 									</a>
-									
-								</li>
-								<li class="dropdown ">
-									<a class="" href="index.html">
+                            </li>
+                            <li class="dropdown ">
+                                <a class="" href="index.html">
 										Blog
 									</a>
-									
-								</li>
-
-								<li class="dropdown ">
-									<a class="" href="index.html">
-										Mentorship Partnership
-									</a>
-									
-								</li>
-								
-							</ul>
-						</nav>
-					</div>
-				</div>
-			</header>
-
-			<div role="main" class="main">
-				<div class="slider-container">
-					<div class="slider" id="revolutionSlider" data-plugin-revolution-slider data-plugin-options='{"startheight": 500}'>
-						<ul>
-							<li data-transition="fade" data-slotamount="13" data-masterspeed="300" >
-				
-								<img src="img/slides/slide-bg.jpg" data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat" alt="">
-				
-								<div class="tp-caption sft stb visible-lg"
-									 data-x="177"
-									 data-y="180"
-									 data-speed="300"
-									 data-start="1000"
-									 data-easing="easeOutExpo"><img src="img/slides/slide-title-border.png" alt=""></div>
-				
-								<div class="tp-caption top-label lfl stl"
-									 data-x="227"
-									 data-y="180"
-									 data-speed="300"
-									 data-start="500"
-									 data-easing="easeOutExpo">DO YOU NEED A NEW</div>
-				
-								<div class="tp-caption sft stb visible-lg"
-									 data-x="477"
-									 data-y="180"
-									 data-speed="300"
-									 data-start="1000"
-									 data-easing="easeOutExpo"><img src="img/slides/slide-title-border.png" alt=""></div>
-				
-								<div class="tp-caption main-label sft stb"
-									 data-x="200"
-									 data-y="210"
-									 data-speed="300"
-									 data-start="1500"
-									 data-easing="easeOutExpo">MENTOR?</div>
-				
-								<div class="tp-caption bottom-label sft stb"
-									 data-x="185"
-									 data-y="280"
-									 data-speed="500"
-									 data-start="2000"
-									 data-easing="easeOutExpo">Find out our new mentors to help you.</div>
-				
-								<div class="tp-caption randomrotate"
-									 data-x="905"
-									 data-y="248"
-									 data-speed="500"
-									 data-start="2500"
-									 data-easing="easeOutBack"><img src="img/slides/slide-concept-2-1.png" alt=""></div>
-				
-								<div class="tp-caption sfb"
-									 data-x="955"
-									 data-y="200"
-									 data-speed="400"
-									 data-start="3000"
-									 data-easing="easeOutBack"><img src="img/slides/slide-concept-2-2.png" alt=""></div>
-				
-								<div class="tp-caption sfb"
-									 data-x="925"
-									 data-y="170"
-									 data-speed="700"
-									 data-start="3150"
-									 data-easing="easeOutBack"><img src="img/slides/slide-concept-2-3.png" alt=""></div>
-				
-								<div class="tp-caption sfb"
-									 data-x="875"
-									 data-y="130"
-									 data-speed="1000"
-									 data-start="3250"
-									 data-easing="easeOutBack"><img src="img/slides/slide-concept-2-4.png" alt=""></div>
-				
-								<div class="tp-caption sfb"
-									 data-x="605"
-									 data-y="80"
-									 data-speed="600"
-									 data-start="3450"
-									 data-easing="easeOutExpo"><img src="img/slides/slide-concept-2-5.png" alt=""></div>
-				
-								<div class="tp-caption blackboard-text lfb "
-									 data-x="635"
-									 data-y="300"
-									 data-speed="500"
-									 data-start="3450"
-									 data-easing="easeOutExpo" style="font-size: 37px;">Need</div>
-				
-								<div class="tp-caption blackboard-text lfb "
-									 data-x="660"
-									 data-y="350"
-									 data-speed="500"
-									 data-start="3650"
-									 data-easing="easeOutExpo" style="font-size: 47px;">An</div>
-				
-								<div class="tp-caption blackboard-text lfb "
-									 data-x="685"
-									 data-y="400"
-									 data-speed="500"
-									 data-start="3850"
-									 data-easing="easeOutExpo" style="font-size: 32px;">IDEA :)</div>
-							</li>
-							<li data-transition="fade" data-slotamount="5" data-masterspeed="1000" >
-				
-								<img src="img/slides/slide-bg.jpg" data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat" alt="">
-				
-									<div class="tp-caption sft stb"
-										 data-x="155"
-										 data-y="100"
-										 data-speed="600"
-										 data-start="100"
-										 data-easing="easeOutExpo"><img src="img/slides/slide-concept.png" alt=""></div>
-				
-									<div class="tp-caption blackboard-text sft stb"
-										 data-x="285"
-										 data-y="180"
-										 data-speed="900"
-										 data-start="1000"
-										 data-easing="easeOutExpo" style="font-size: 30px;">become</div>
-				
-									<div class="tp-caption blackboard-text sft stb"
-										 data-x="285"
-										 data-y="220"
-										 data-speed="900"
-										 data-start="1200"
-										 data-easing="easeOutExpo" style="font-size: 40px;">a mentor</div>
-				
-									<div class="tp-caption main-label sft stb"
-										 data-x="685"
-										 data-y="190"
-										 data-speed="300"
-										 data-start="900"
-										 data-easing="easeOutExpo">HELP PEOPLE!</div>
-				
-									<div class="tp-caption bottom-label sft stb"
-										 data-x="685"
-										 data-y="250"
-										 data-speed="500"
-										 data-start="2000"
-										 data-easing="easeOutExpo">Start creating your new enterprise
-							</li>
-						</ul>
-					</div>
-				</div>
-				<div class="home-intro" id="home-intro">
-					<div class="container">
-				
-						<div class="row">
-							<div class="col-md-8">
-								<p>
-									Become a memeber now to find a <em>Mentor</em> or to be a <em>Mentee</em>
-									<span>Join our free community of entrepreneurs and volunteer mentors.</span>
-								</p>
-							</div>
-							<div class="col-md-4">
-								<div class="get-started">
-									<a href="#" class="btn btn-lg btn-primary">Join Now!</a>
-									<div class="learn-more">or <a href="index.html">learn more.</a></div>
-								</div>
-							</div>
-						</div>
-				
-					</div>
-				</div>
-				
-				<div class="container">
-				
-					<div class="row center">
-						<div class="col-md-12">
-							<h1 class="mb-sm word-rotator-title">
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <div role="main" class="main">
+            <div class="slider-container">
+                <div class="slider" id="revolutionSlider" data-plugin-revolution-slider data-plugin-options='{"startheight": 500}'>
+                    <ul>
+                        <li data-transition="fade" data-slotamount="13" data-masterspeed="300">
+                            <img src="img/slides/slide-bg.jpg" data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat" alt="">
+                            <div class="tp-caption sft stb visible-lg" data-x="177" data-y="180" data-speed="300" data-start="1000" data-easing="easeOutExpo"><img src="img/slides/slide-title-border.png" alt=""></div>
+                            <div class="tp-caption top-label lfl stl" data-x="227" data-y="180" data-speed="300" data-start="500" data-easing="easeOutExpo">DO YOU NEED A NEW</div>
+                            <div class="tp-caption sft stb visible-lg" data-x="477" data-y="180" data-speed="300" data-start="1000" data-easing="easeOutExpo"><img src="img/slides/slide-title-border.png" alt=""></div>
+                            <div class="tp-caption main-label sft stb" data-x="200" data-y="210" data-speed="300" data-start="1500" data-easing="easeOutExpo">MENTOR?</div>
+                            <div class="tp-caption bottom-label sft stb" data-x="185" data-y="280" data-speed="500" data-start="2000" data-easing="easeOutExpo">Find out our new mentors to help you.</div>
+                            <div class="tp-caption randomrotate" data-x="905" data-y="248" data-speed="500" data-start="2500" data-easing="easeOutBack"><img src="img/slides/slide-concept-2-1.png" alt=""></div>
+                            <div class="tp-caption sfb" data-x="955" data-y="200" data-speed="400" data-start="3000" data-easing="easeOutBack"><img src="img/slides/slide-concept-2-2.png" alt=""></div>
+                            <div class="tp-caption sfb" data-x="925" data-y="170" data-speed="700" data-start="3150" data-easing="easeOutBack"><img src="img/slides/slide-concept-2-3.png" alt=""></div>
+                            <div class="tp-caption sfb" data-x="875" data-y="130" data-speed="1000" data-start="3250" data-easing="easeOutBack"><img src="img/slides/slide-concept-2-4.png" alt=""></div>
+                            <div class="tp-caption sfb" data-x="605" data-y="80" data-speed="600" data-start="3450" data-easing="easeOutExpo"><img src="img/slides/slide-concept-2-5.png" alt=""></div>
+                            <div class="tp-caption blackboard-text lfb " data-x="635" data-y="300" data-speed="500" data-start="3450" data-easing="easeOutExpo" style="font-size: 37px;">Need</div>
+                            <div class="tp-caption blackboard-text lfb " data-x="660" data-y="350" data-speed="500" data-start="3650" data-easing="easeOutExpo" style="font-size: 47px;">An</div>
+                            <div class="tp-caption blackboard-text lfb " data-x="685" data-y="400" data-speed="500" data-start="3850" data-easing="easeOutExpo" style="font-size: 32px;">IDEA :)</div>
+                        </li>
+                        <li data-transition="fade" data-slotamount="5" data-masterspeed="1000">
+                            <img src="img/slides/slide-bg.jpg" data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat" alt="">
+                            <div class="tp-caption sft stb" data-x="155" data-y="100" data-speed="600" data-start="100" data-easing="easeOutExpo"><img src="img/slides/slide-concept.png" alt=""></div>
+                            <div class="tp-caption blackboard-text sft stb" data-x="285" data-y="180" data-speed="900" data-start="1000" data-easing="easeOutExpo" style="font-size: 30px;">become</div>
+                            <div class="tp-caption blackboard-text sft stb" data-x="285" data-y="220" data-speed="900" data-start="1200" data-easing="easeOutExpo" style="font-size: 40px;">a mentor</div>
+                            <div class="tp-caption main-label sft stb" data-x="685" data-y="190" data-speed="300" data-start="900" data-easing="easeOutExpo">HELP PEOPLE!</div>
+                            <div class="tp-caption bottom-label sft stb" data-x="685" data-y="250" data-speed="500" data-start="2000" data-easing="easeOutExpo">Start creating your new enterprise
+                        </li>
+                    </ul>
+                    </div>
+                </div>
+                <div class="home-intro" id="home-intro">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <p>
+                                    Become a memeber now to find a <em>Mentor</em> or to be a <em>Mentee</em>
+                                    <span>Join our free community of entrepreneurs and volunteer mentors.</span>
+                                </p>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="get-started">
+                                    <a href="#" class="btn btn-lg btn-primary">Join Now!</a>
+                                    <div class="learn-more">or <a href="index.html">learn more.</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row center">
+                        <div class="col-md-12">
+                            <h1 class="mb-sm word-rotator-title">
 								FindAMentor is a
 								<strong class="inverted">
 									<span class="word-rotate" data-plugin-options='{"delay": 2000, "animDelay": 300}'>
@@ -317,136 +459,122 @@
 								</strong>
 								usefull social network that allows entrepreneurs and volunteer business mentors to connect
 							</h1>
-							<p class="lead">
-								Join a growing community that has already created thousands of mentor-mentee matches and continues to make an impact through the power of mentoring to help small businesses thrive.
-							</p>
-						</div>
-					</div>
-				
-				</div>
-				
-				<div class="home-concept">
-					<div class="container">
-				
-						<div class="row center">
-							<span class="sun"></span>
-							<span class="cloud"></span>
-							<div class="col-md-2 col-md-offset-1">
-								<div class="process-image" data-appear-animation="bounceIn">
-									<img src="images/profile.jpeg" height="145" width="145" alt="" />
-									<strong>1.Create Profile</strong>
-								</div>
-							</div>
-							<div class="col-md-2">
-								<div class="process-image" data-appear-animation="bounceIn" data-appear-animation-delay="200">
-									<img src="images/reachout.jpeg" height="145" width="145" alt="" />
-									<strong>2.Reach Out</strong>
-								</div>
-							</div>
-							<div class="col-md-2">
-								<div class="process-image" data-appear-animation="bounceIn" data-appear-animation-delay="400">
-									<img src="images/help.jpeg" height="142" width="145" alt="" />
-									<strong>3.Start Mentoring</strong>
-								</div>
-							</div>
-							<div class="col-md-4 col-md-offset-1">
-								<div class="project-image">
-									<div id="fcSlideshow" class="fc-slideshow">
-										<ul class="fc-slides">
-											<li><a href="#"><img class="img-responsive" src="images/project1.jpeg" h alt="" /></a></li>
-											<li><a href="#"><img class="img-responsive" src="images/project2.jpeg" height="338" width="338" alt="" /></a></li>
-											<li><a href="#"><img class="img-responsive" src="images/project3.jpeg" height="338" width="338" alt="" /></a></li>
-										</ul>
-									</div>
-									<strong class="our-work">Work Together!</strong>
-								</div>
-							</div>
-						</div>
-				
-					</div>
-				</div>
-
-				<section class="section section-default">
-					<div class="container">
-						<div class="row">
-							<div class="col-md-6">
-								<h2 class="mt-lg">For <strong>Organizations</strong></h2>
-								<p class="lead">
-									We help your business to grow. You can find great resources to improve your enterprise.
-								</p>
-								<p class="mt-lg">
-									 FindAMentor also bundles our unique, web-based platform with dedicated programmatic support to help large organizations get employee volunteering and mentoring initiatives off the ground easily, effectively, and at scale. With a track record of creating satisfying mentoring experiences and fueling business growth, MicroMentor offers corporations and government agencies the potential for unprecedented reach and maximum impac.
-								</p>
-							</div>
-							<div class="col-md-6 mt-lg">
-								<img class="img-responsive appear-animation fadeInRight appear-animation-visible" src="images/grow.jpg"  data-appear-animation="fadeInRight" alt="">
-							</div>
-						</div>
-					</div>
-				</section>
-				
-				<div class="container">
-				
-					<div class="row">
-						<hr class="tall">
-					</div>
-				
-				</div>
-
-				<div class="container">
-					<div class="featured-boxes">
-						<div class="row">
-							<div class="col-md-3 col-sm-6">
-								<div class="featured-box featured-box-primary featured-box-effect-1" style="height: 385px;">
-									<div class="box-content">
-										<i class="icon-featured fa fa-user"></i>
-										<h4 class="text-uppercase">Easy Registration</h4>
-										<p>Registration process is painless. Just follow the introduction on the website.</p>
-										<p><a href="/" class="lnk-primary learn-more">Learn More <i class="fa fa-angle-right"></i></a></p>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-3 col-sm-6">
-								<div class="featured-box featured-box-secondary featured-box-effect-1" style="height: 385px;">
-									<div class="box-content">
-										<i class="icon-featured fa fa-book"></i>
-										<h4 class="text-uppercase">Easy To Communicate</h4>
-										<p>Communicate with people so easy and get the responses back.</p>
-										<p><a href="/" class="lnk-secondary learn-more">Learn more <i class="fa fa-angle-right"></i></a></p>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-3 col-sm-6">
-								<div class="featured-box featured-box-tertiary featured-box-effect-1" style="height: 385px;">
-									<div class="box-content">
-										<i class="icon-featured fa fa-trophy"></i>
-										<h4 class="text-uppercase">Easy To Get Advices</h4>
-										<p>Listen to their advices and apply them.</p>
-										<p><a href="/" class="lnk-tertiary learn-more">Learn more <i class="fa fa-angle-right"></i></a></p>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-3 col-sm-6">
-								<div class="featured-box featured-box-quaternary featured-box-effect-1" style="height: 385px;">
-									<div class="box-content">
-										<i class="icon-featured fa fa-cogs"></i>
-										<h4 class="text-uppercase">Easy To Find People</h4>
-										<p>Connect people and exchange your ideas </p>
-										<p><a href="/" class="lnk-quaternary learn-more">Learn more <i class="fa fa-angle-right"></i></a></p>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-md-12">
-							<hr class="tall">
-						</div>
-					</div>
-
-					<div class="row center">
-						<div class="col-md-12">
-							<h2 class="mb-sm word-rotator-title">
+                            <p class="lead">
+                                Join a growing community that has already created thousands of mentor-mentee matches and continues to make an impact through the power of mentoring to help small businesses thrive.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="home-concept">
+                    <div class="container">
+                        <div class="row center">
+                            <span class="sun"></span>
+                            <span class="cloud"></span>
+                            <div class="col-md-2 col-md-offset-1">
+                                <div class="process-image" data-appear-animation="bounceIn">
+                                    <img src="images/profile.jpeg" height="145" width="145" alt="" />
+                                    <strong>1.Create Profile</strong>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="process-image" data-appear-animation="bounceIn" data-appear-animation-delay="200">
+                                    <img src="images/reachout.jpeg" height="145" width="145" alt="" />
+                                    <strong>2.Reach Out</strong>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="process-image" data-appear-animation="bounceIn" data-appear-animation-delay="400">
+                                    <img src="images/help.jpeg" height="142" width="145" alt="" />
+                                    <strong>3.Start Mentoring</strong>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-md-offset-1">
+                                <div class="project-image">
+                                    <div id="fcSlideshow" class="fc-slideshow">
+                                        <ul class="fc-slides">
+                                            <li>
+                                                <a href="#"><img class="img-responsive" src="images/project1.jpeg" h alt="" /></a>
+                                            </li>
+                                            <li>
+                                                <a href="#"><img class="img-responsive" src="images/project2.jpeg" height="338" width="338" alt="" /></a>
+                                            </li>
+                                            <li>
+                                                <a href="#"><img class="img-responsive" src="images/project3.jpeg" height="338" width="338" alt="" /></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <strong class="our-work">Work Together!</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <section class="section section-default">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h2 class="mt-lg">For <strong>Organizations</strong></h2>
+                                <p class="lead">
+                                    We help your business to grow. You can find great resources to improve your enterprise.
+                                </p>
+                                <p class="mt-lg">
+                                    FindAMentor also bundles our unique, web-based platform with dedicated programmatic support to help large organizations get employee volunteering and mentoring initiatives off the ground easily, effectively, and at scale. With a track record of creating satisfying mentoring experiences and fueling business growth, MicroMentor offers corporations and government agencies the potential for unprecedented reach and maximum impac.
+                                </p>
+                            </div>
+                            <div class="col-md-6 mt-lg">
+                                <img class="img-responsive appear-animation fadeInRight appear-animation-visible" src="images/grow.jpg" data-appear-animation="fadeInRight" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <div class="container">
+                    <div class="row">
+                        <hr class="tall">
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="featured-boxes">
+                        <div class="row">
+                            <div class="col-md-4 col-sm-6">
+                                <div class="featured-box featured-box-secondary featured-box-effect-1" style="height: 385px;">
+                                    <div class="box-content">
+                                        <i class="icon-featured fa fa-book"></i>
+                                        <h4 class="text-uppercase">Easy To Communicate</h4>
+                                        <p>Communicate with people so easy and get the responses back.</p>
+                                        <p><a href="/" class="lnk-secondary learn-more">Learn more <i class="fa fa-angle-right"></i></a></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-6">
+                                <div class="featured-box featured-box-tertiary featured-box-effect-1" style="height: 385px;">
+                                    <div class="box-content">
+                                        <i class="icon-featured fa fa-trophy"></i>
+                                        <h4 class="text-uppercase">Easy To Get Advices</h4>
+                                        <p>Listen to their advices and apply them.</p>
+                                        <p><a href="/" class="lnk-tertiary learn-more">Learn more <i class="fa fa-angle-right"></i></a></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-6">
+                                <div class="featured-box featured-box-quaternary featured-box-effect-1" style="height: 385px;">
+                                    <div class="box-content">
+                                        <i class="icon-featured fa fa-cogs"></i>
+                                        <h4 class="text-uppercase">Easy To Find People</h4>
+                                        <p>Connect people and exchange your ideas </p>
+                                        <p><a href="/" class="lnk-quaternary learn-more">Learn more <i class="fa fa-angle-right"></i></a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <hr class="tall">
+                        </div>
+                    </div>
+                    <div class="row center">
+                        <div class="col-md-12">
+                            <h2 class="mb-sm word-rotator-title">
 								We are really 
 								<strong>
 									<span class="word-rotate active" data-plugin-options="{&quot;delay&quot;: 3500, &quot;animDelay&quot;: 400}">
@@ -458,186 +586,178 @@
 								</strong>
 								about this platform
 							</h2>
-							<h4 class="heading-primary lead tall">5,500 mentors and 12,000 mentees across the contry. Meet them now.</h4>
-						</div>
-					</div>
-
-					<div class="row center">
-						<div class="owl-carousel" data-plugin-options='{"items": 6, "autoplay": true, "autoplayTimeout": 3000}'>
-							<div>
-								<img class="img-responsive" src="img/logos/logo-1.png" alt="">
-							</div>
-							<div>
-								<img class="img-responsive" src="img/logos/logo-2.png" alt="">
-							</div>
-							<div>
-								<img class="img-responsive" src="img/logos/logo-3.png" alt="">
-							</div>
-							<div>
-								<img class="img-responsive" src="img/logos/logo-4.png" alt="">
-							</div>
-							<div>
-								<img class="img-responsive" src="img/logos/logo-5.png" alt="">
-							</div>
-							<div>
-								<img class="img-responsive" src="img/logos/logo-6.png" alt="">
-							</div>
-							<div>
-								<img class="img-responsive" src="img/logos/logo-4.png" alt="">
-							</div>
-							<div>
-								<img class="img-responsive" src="img/logos/logo-2.png" alt="">
-							</div>
-						</div>
-					</div>
-					
-				</div>
-				
-				
-				
-				<section class="section section-custom-map">
-					<section class="section section-default section-footer">
-						<div class="container">
-							<div class="row">
-								
-								<div class="col-md-12">
-									<h2><strong>What</strong> Users' Say</h2>
-									<div class="row">
-										<div class="owl-carousel mb-none" data-plugin-options='{"items": 1}'>
-											<div>
-												<div class="col-md-12">
-													<div class="testimonial testimonial-primary">
-														<blockquote>
-															<p>I was with some spare time and a little bit unhappy with my work environment. Then I met Ariana on FindAMentor. She did for me as much as I could have possibly done for her. It was unbelievable the uplifting she did to my life</p>
-														</blockquote>
-														<div class="testimonial-arrow-down"></div>
-														<div class="testimonial-author">
-															<div class="testimonial-author-thumbnail img-thumbnail">
-																<img src="images/face1.jpeg"  alt="">
-															</div>
-															<p><strong>Anna Jobs</strong><span>CEO & Founder - ABC</span></p>
-														</div>
-													</div>
-												</div>
-											</div>
-											<div>
-												<div class="col-md-12">
-													<div class="testimonial testimonial-primary">
-														<blockquote>
-															<p>Mentoring is essential. I won't always agree with my mentors, but it's good to have an objective third party to share insights with.</p>
-														</blockquote>
-														<div class="testimonial-arrow-down"></div>
-														<div class="testimonial-author">
-															<div class="testimonial-author-thumbnail img-thumbnail">
-																<img src="images/face2.jpeg"  alt="">
-															</div>
-															<p><strong>John Smith</strong><span>CEO & Founder - EDF</span></p>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</section>
-				</section>
-			</div>
- 
-			<footer id="footer">
-				<div class="container">
-					<div class="row">
-						<div class="footer-ribbon">
-							<span>Get in Touch</span>
-						</div>
-						
-						<div class="col-md-8">
-							<div class="contact-details">
-								<h4 class="heading-primary">Contact Us</h4>
-								<ul class="contact">
-									<li><p><i class="fa fa-map-marker"></i> <strong>Address:</strong> 1234 Street Name, City Name, Canada</p></li>
-									<li><p><i class="fa fa-phone"></i> <strong>Phone:</strong> (123) 456-7890</p></li>
-									<li><p><i class="fa fa-envelope"></i> <strong>Email:</strong> <a href="mailto:tinhoc@outlook.com">tinhoc@outlook.com</a></p></li>
-								</ul>
-							</div>
-						</div>
-						<div class="col-md-4">
-							<h4 class="heading-primary">Follow Us</h4>
-							<div class="social-icons">
-								<ul class="social-icons">
-									<li class="facebook"><a href="http://www.facebook.com/" target="_blank" data-placement="bottom" data-tooltip title="Facebook">Facebook</a></li>
-									<li class="twitter"><a href="http://www.twitter.com/" target="_blank" data-placement="bottom" data-tooltip title="Twitter">Twitter</a></li>
-									<li class="linkedin"><a href="http://www.linkedin.com/" target="_blank" data-placement="bottom" data-tooltip title="Linkedin">Linkedin</a></li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="footer-copyright">
-					<div class="container">
-						<div class="row">
-							<div class="col-md-1">
-								<a href="index.html" class="logo">
-									<img alt=" Website Template" class="img-responsive" src="img/logo.png">
-								</a>
-							</div>
-							<div class="col-md-7">
-								<p>© Copyright 2015. All Rights Reserved.</p>
-							</div>
-							<div class="col-md-4">
-								<nav id="sub-menu">
-									<ul>
-										<li><a href="page-faq.html">FAQ's</a></li>
-										<li><a href="terms-of-use.html">Terms Of Use</a></li>
-										<li><a href="privacy-policy.html">Privacy Policy</a></li>
-									</ul>
-								</nav>
-							</div>
-						</div>
-					</div>
-				</div>
-			</footer>
-		</div>
-
-		<!-- Vendor -->
-		<!--[if lt IE 9]>
+                            <h4 class="heading-primary lead tall">5,500 mentors and 12,000 mentees across the contry. Meet them now.</h4>
+                        </div>
+                    </div>
+                    <div class="row center">
+                        <div class="owl-carousel" data-plugin-options='{"items": 6, "autoplay": true, "autoplayTimeout": 3000}'>
+                            <div>
+                                <img class="img-responsive" src="img/logos/logo-1.png" alt="">
+                            </div>
+                            <div>
+                                <img class="img-responsive" src="img/logos/logo-2.png" alt="">
+                            </div>
+                            <div>
+                                <img class="img-responsive" src="img/logos/logo-3.png" alt="">
+                            </div>
+                            <div>
+                                <img class="img-responsive" src="img/logos/logo-4.png" alt="">
+                            </div>
+                            <div>
+                                <img class="img-responsive" src="img/logos/logo-5.png" alt="">
+                            </div>
+                            <div>
+                                <img class="img-responsive" src="img/logos/logo-6.png" alt="">
+                            </div>
+                            <div>
+                                <img class="img-responsive" src="img/logos/logo-4.png" alt="">
+                            </div>
+                            <div>
+                                <img class="img-responsive" src="img/logos/logo-2.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <section class="section section-custom-map">
+                    <section class="section section-default section-footer">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <h2><strong>What</strong> Users' Say</h2>
+                                    <div class="row">
+                                        <div class="owl-carousel mb-none" data-plugin-options='{"items": 1}'>
+                                            <div>
+                                                <div class="col-md-12">
+                                                    <div class="testimonial testimonial-primary">
+                                                        <blockquote>
+                                                            <p>I was with some spare time and a little bit unhappy with my work environment. Then I met Ariana on FindAMentor. She did for me as much as I could have possibly done for her. It was unbelievable the uplifting she did to my life</p>
+                                                        </blockquote>
+                                                        <div class="testimonial-arrow-down"></div>
+                                                        <div class="testimonial-author">
+                                                            <div class="testimonial-author-thumbnail img-thumbnail">
+                                                                <img src="images/face1.jpeg" alt="">
+                                                            </div>
+                                                            <p><strong>Anna Jobs</strong><span>CEO & Founder - ABC</span></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <div class="col-md-12">
+                                                    <div class="testimonial testimonial-primary">
+                                                        <blockquote>
+                                                            <p>Mentoring is essential. I won't always agree with my mentors, but it's good to have an objective third party to share insights with.</p>
+                                                        </blockquote>
+                                                        <div class="testimonial-arrow-down"></div>
+                                                        <div class="testimonial-author">
+                                                            <div class="testimonial-author-thumbnail img-thumbnail">
+                                                                <img src="images/face2.jpeg" alt="">
+                                                            </div>
+                                                            <p><strong>John Smith</strong><span>CEO & Founder - EDF</span></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </section>
+            </div>
+            <footer id="footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="footer-ribbon">
+                            <span>Get in Touch</span>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="contact-details">
+                                <h4 class="heading-primary">Contact Us</h4>
+                                <ul class="contact">
+                                    <li>
+                                        <p><i class="fa fa-map-marker"></i> <strong>Address:</strong> 1234 Street Name, City Name, Canada</p>
+                                    </li>
+                                    <li>
+                                        <p><i class="fa fa-phone"></i> <strong>Phone:</strong> (123) 456-7890</p>
+                                    </li>
+                                    <li>
+                                        <p><i class="fa fa-envelope"></i> <strong>Email:</strong> <a href="mailto:tinhoc@outlook.com">tinhoc@outlook.com</a></p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <h4 class="heading-primary">Follow Us</h4>
+                            <div class="social-icons">
+                                <ul class="social-icons">
+                                    <li class="facebook"><a href="http://www.facebook.com/" target="_blank" data-placement="bottom" data-tooltip title="Facebook">Facebook</a></li>
+                                    <li class="twitter"><a href="http://www.twitter.com/" target="_blank" data-placement="bottom" data-tooltip title="Twitter">Twitter</a></li>
+                                    <li class="linkedin"><a href="http://www.linkedin.com/" target="_blank" data-placement="bottom" data-tooltip title="Linkedin">Linkedin</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-copyright">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-1">
+                                <a href="index.html" class="logo">
+                                    <img alt=" Website Template" class="img-responsive" src="img/logo.png">
+                                </a>
+                            </div>
+                            <div class="col-md-7">
+                                <p>© Copyright 2015. All Rights Reserved.</p>
+                            </div>
+                            <div class="col-md-4">
+                                <nav id="sub-menu">
+                                    <ul>
+                                        <li><a href="page-faq.html">FAQ's</a></li>
+                                        <li><a href="terms-of-use.html">Terms Of Use</a></li>
+                                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <!-- Vendor -->
+        <!--[if lt IE 9]>
 		<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
 		<![endif]-->
-		<!--[if gte IE 9]><!-->
-		<script src="vendor/jquery/jquery.js"></script>
-		<!--<![endif]-->
-		<script src="vendor/jquery.appear/jquery.appear.js"></script>
-		<script src="vendor/jquery.easing/jquery.easing.js"></script>
-		<script src="vendor/jquery-cookie/jquery-cookie.js"></script>
-		<script src="vendor/bootstrap/bootstrap.js"></script>
-		<script src="vendor/common/common.js"></script>
-		<script src="vendor/jquery.validation/jquery.validation.js"></script>
-		<script src="vendor/jquery.stellar/jquery.stellar.js"></script>
-		<script src="vendor/jquery.easy-pie-chart/jquery.easy-pie-chart.js"></script>
-		<script src="vendor/jquery.gmap/jquery.gmap.js"></script>
-		<script src="vendor/isotope/jquery.isotope.js"></script>
-		<script src="vendor/owlcarousel/owl.carousel.js"></script>
-		<script src="vendor/jflickrfeed/jflickrfeed.js"></script>
-		<script src="vendor/magnific-popup/jquery.magnific-popup.js"></script>
-		<script src="vendor/vide/vide.js"></script>
-		
-		<!-- Theme Base, Components and Settings -->
-		<script src="js/theme.js"></script>
-		
-		<!-- Specific Page Vendor and Views -->
-		<script src="vendor/rs-plugin/js/jquery.themepunch.tools.min.js"></script>
-		<script src="vendor/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
-		<script src="vendor/circle-flip-slideshow/js/jquery.flipshow.js"></script>
-		<script src="js/views/view.home.js"></script>
-		
-		<!-- Theme Custom -->
-		<script src="js/custom.js"></script>
-		
-		<!-- Theme Initialization Files -->
-		<script src="js/theme.init.js"></script>
-
-		<!-- Google Analytics: Change UA-XXXXX-X to be your site's ID. Go to http://www.google.com/analytics/ for more information.
+        <!--[if gte IE 9]><!-->
+        <script src="vendor/jquery/jquery.js"></script>
+        <!--<![endif]-->
+        <script src="vendor/jquery.appear/jquery.appear.js"></script>
+        <script src="vendor/jquery.easing/jquery.easing.js"></script>
+        <script src="vendor/jquery-cookie/jquery-cookie.js"></script>
+        <script src="vendor/bootstrap/bootstrap.js"></script>
+        <script src="vendor/common/common.js"></script>
+        <script src="vendor/jquery.validation/jquery.validation.js"></script>
+        <script src="vendor/jquery.stellar/jquery.stellar.js"></script>
+        <script src="vendor/jquery.easy-pie-chart/jquery.easy-pie-chart.js"></script>
+        <script src="vendor/jquery.gmap/jquery.gmap.js"></script>
+        <script src="vendor/isotope/jquery.isotope.js"></script>
+        <script src="vendor/owlcarousel/owl.carousel.js"></script>
+        <script src="vendor/jflickrfeed/jflickrfeed.js"></script>
+        <script src="vendor/magnific-popup/jquery.magnific-popup.js"></script>
+        <script src="vendor/vide/vide.js"></script>
+        <!-- Theme Base, Components and Settings -->
+        <script src="js/theme.js"></script>
+        <!-- Specific Page Vendor and Views -->
+        <script src="vendor/rs-plugin/js/jquery.themepunch.tools.min.js"></script>
+        <script src="vendor/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+        <script src="vendor/circle-flip-slideshow/js/jquery.flipshow.js"></script>
+        <script src="js/views/view.home.js"></script>
+        <!-- Theme Custom -->
+        <script src="js/custom.js"></script>
+        <!-- Theme Initialization Files -->
+        <script src="js/theme.init.js"></script>
+        <!-- Google Analytics: Change UA-XXXXX-X to be your site's ID. Go to http://www.google.com/analytics/ for more information.
 		<script type="text/javascript">
 		
 			var _gaq = _gaq || [];
@@ -652,6 +772,6 @@
 		
 		</script>
 		 -->
+</body>
 
-	</body>
 </html>

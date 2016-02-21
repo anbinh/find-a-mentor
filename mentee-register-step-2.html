@@ -610,7 +610,8 @@
                 }]
 
             }, {
-                name: "Business and Enterpreneurship"
+                name: "Business and Enterpreneurship",
+                subs : []
             }, {
                 name: "Study and Reading",
                 subs: [{
@@ -830,6 +831,34 @@
 
             }, 0);
         }
+
+
+        var primaryAreas = $scope.primaryAreas;
+
+        var str = "";
+        for (var i = 0; i < primaryAreas.length; i++) {
+
+            str += '<li class="dropdown-submenu">';
+
+            str += '<a href="#">'+primaryAreas[i].name+'</a>'; 
+
+            str += '<ul class="dropdown-menu">';
+
+            console.log(primaryAreas[i]);
+
+
+            for (var j = 0; j < primaryAreas[i].subs.length; j++) {
+                var sub = primaryAreas[i].subs[j];
+
+                str += '<li><a href="#">'+sub.name+'</a></li>';
+            };
+
+            str += '</ul>';
+
+            str += '</li>';
+        };
+
+        console.log(str);
     });
     </script>
 </body>
