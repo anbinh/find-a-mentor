@@ -3558,11 +3558,15 @@ th.card-info-header {
 }
 
 #header nav ul.nav-main ul.dropdown-menu {
-	
+
 }
 
 #header nav ul.nav-main ul.dropdown-menu ul.dropdown-menu {
 	    max-height: 500px;
     overflow-y: scroll;
+}
+
+#header .search {
+    float: right;
 }
 
