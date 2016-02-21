@@ -34,6 +34,16 @@
     <link rel="stylesheet" href="css/custom.css">
     <!-- Head Libs -->
     <script src="vendor/modernizr/modernizr.js"></script>
+
+
+
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBzGq41QaQqdiH0KqbYM0IrwSh0EaGfio4
+        &signed_in=true&libraries=places">
+    </script>
     <!--[if IE]>
 			<link rel="stylesheet" href="css/ie.css">
 		<![endif]-->
@@ -43,7 +53,7 @@
 		<![endif]-->
 </head>
 
-<body>
+<body ng-app="app">
     <div class="body">
         <header id="header">
             <div class="container">
@@ -90,15 +100,11 @@
 										Home
 									</a>
                             </li>
-                            <li class="dropdown mega-menu-item active">
-                                <a class="dropdown-toggle" href="#">
-										Registration
-									</a>
-                                <ul class="dropdown-menu ">
-                                    <li><a href="/mentor-register.html">Mentor</a></li>
-                                    <li><a href="/mentee-register.html">Mentee</a></li>
-                                </ul>
-                            </li>
+                            <li class="dropdown ">
+                                    <a class="" href="/mentor-register.html">
+                                        Registration
+                                    </a>
+                                </li>
                             <li class="dropdown ">
                                 <a class="" href="/login.html">
 										Login
@@ -166,7 +172,7 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="offer inactive">
+                            <li class="offer ">
                                 <div class="thumbnail sell-cards-thumb">
                                     <p style="margin-bottom : 5px"><i class="fa fa-ellipsis-h fa-3x sell-cards-step-dot"></i> <i class="fa fa-ellipsis-h fa-3x sell-cards-step-dot"></i></p>
                                     <div class="caption offer">
@@ -174,7 +180,7 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="offer inactive" style="margin-left: -20px;">
+                            <li class="offer " style="margin-left: -20px;">
                                 <div class="thumbnail sell-cards-thumb">
                                     <p style="margin-bottom : 5px"><i class="fa fa-wrench fa-3x sell-cards-step-icon"></i></p>
                                     <div class="caption offer">
@@ -186,445 +192,96 @@
                     </div>
                     <div class="col-md-2 col-sm-12 col-xs-12 col-lg-2"></div>
                 </div>
-                <div class="row">
+                
+                <div class="row" ng-controller="Step3Controller">
                     <div class="col-md-12">
                         <div class="featured-boxes">
                             <div class="row">
-                                <div class="col-sm-2">
+                                <div class="col-sm-3">
                                 </div>
-                                <div class="col-sm-8">
+                                <div class="col-sm-6">
                                     <div class="featured-box featured-box-primary align-left mt-xlg">
                                         <div class="box-content">
-                                            <h4 class="heading-primary text-uppercase mb-md">Become A Member</h4>
+                                            <h4 class="heading-primary text-uppercase mb-md">Become A Mentee</h4>
                                             <form action="/" id="frmSignUp" method="post">
-                                                <div class="row">
-                                                    <div class="form-group">
-                                                        <div class="col-md-6">
-                                                            <label>First Name</label>
-                                                            <input type="text" value="" class="form-control input-lg">
-                                                        </div>
-                                                        <div class="col-md-6">
-                                                            <label>Last Name</label>
-                                                            <input type="text" value="" class="form-control input-lg">
-                                                        </div>
-                                                    </div>
-                                                </div>
+
                                                 <div class="row">
                                                     <div class="form-group">
                                                         <div class="col-md-12">
-                                                            <label>E-mail Address</label>
-                                                            <input type="text" value="" class="form-control input-lg">
+                                                            <label>Your Skill</label>
+                                                            <div>
+                                                                <span ng-repeat="skill in user.skills" >
+                                                                    <span class="label label-primary" >
+                                                                        {{skill}}
+                                                                    </span>&nbsp;
+                                                                </span>
+                                                            </div>
+                                                            <br>
+                                                            <div class="input-group input-group-lg">
+                                                              <input type="text" value="" class="form-control input-lg" ng-model="currentSkill">
+                                                              <span class="input-group-addon" id="sizing-addon1" ng-click="addSkill()">Add</span>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
+
                                                 <div class="row">
                                                     <div class="form-group">
                                                         <div class="col-md-6">
-                                                            <label>Password</label>
-                                                            <input type="password" value="" class="form-control input-lg">
+                                                            <label>Your Past Job</label>
+                                                              <input type="text" value="" class="form-control input-lg">
                                                         </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row">
+                                                    <div class="form-group">
                                                         <div class="col-md-6">
-                                                            <label>Re-enter Password</label>
-                                                            <input type="password" value="" class="form-control input-lg">
+                                                            <label>Your Current Job</label>
+                                                              <input type="text" value="" class="form-control input-lg">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row">
+                                                    <div class="form-group">
+                                                        <div class="col-md-12">
+                                                            <label>How long have you been working on your skills?</label>
+                                                              <input type="text" value="" class="form-control input-lg">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row">
+                                                    <div class="form-group">
+                                                        <div class="col-md-12">
+                                                            <label>Your Prefered Job Title</label>
+                                                            <div>
+                                                                <span ng-repeat="job in user.jobs" >
+                                                                    <span class="label label-success" >
+                                                                        {{job}}
+                                                                    </span>&nbsp;
+                                                                </span>
+                                                            </div>
+                                                            <br>
+                                                            <div class="input-group input-group-lg">
+                                                              <input type="text" value="" class="form-control input-lg" ng-model="preferedJob">
+                                                              <span class="input-group-addon" id="sizing-addon1" ng-click="addJob()">Add</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                
+                                                <div class="row">
+                                                    <div class="form-group">
+                                                        <div class="col-md-12">
+                                                            <label>Prefered Location</label>
+                                                            <input type="text" value="" class="form-control input-lg" ng-model="user.location" typeahead="place.description for place in getPlace($viewValue)" typeahead-on-select="onSelectPlace($item, $model, $label)">
                                                         </div>
                                                     </div>
                                                 </div>
                                                 
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                            <a href="/abc" class="btn btn-primary pull-right mb-xl">Next</a>
-                                            </div>
-                                        </div>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-2">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="featured-boxes">
-                            <div class="row">
-                                <div class="col-sm-2">
-                                </div>
-                                <div class="col-sm-8">
-                                    <div class="featured-box featured-box-primary align-left mt-xlg">
-                                        <div class="box-content">
-                                            <h4 class="heading-primary text-uppercase mb-md">Become A Mentor</h4>
-                                            <form action="/" id="frmSignUp" method="post">
-                                                <div class="row">
-                                                    <div class="form-group">
-                                                        <div class="col-md-6">
-                                                            <label>First Name</label>
-                                                            <input type="text" value="" class="form-control input-lg">
-                                                        </div>
-                                                        <div class="col-md-6">
-                                                            <label>Last Name</label>
-                                                            <input type="text" value="" class="form-control input-lg">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="form-group">
-                                                        <div class="col-md-12">
-                                                            <label>E-mail Address</label>
-                                                            <input type="text" value="" class="form-control input-lg">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="form-group">
-                                                        <div class="col-md-6">
-                                                            <label>Password</label>
-                                                            <input type="password" value="" class="form-control input-lg">
-                                                        </div>
-                                                        <div class="col-md-6">
-                                                            <label>Re-enter Password</label>
-                                                            <input type="password" value="" class="form-control input-lg">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="form-group">
-                                                        <div class="col-md-12">
-                                                            <label>Expertise</label>
-                                                            <select class="form-control input-lg">
-                                                                <option value=""></option>
-                                                                <optgroup label="Accounting and Finance">
-                                                                    <option value="1">Accounting</option>
-                                                                    <option value="126">Audits</option>
-                                                                    <option value="2">Bookkeeping</option>
-                                                                    <option value="3">Budgeting</option>
-                                                                    <option value="4">Cash Flow</option>
-                                                                    <option value="6">Financial Planning</option>
-                                                                    <option value="7">Loans and Financing</option>
-                                                                    <option value="8">Taxes</option>
-                                                                    <option value="101">Other</option>
-                                                                </optgroup>
-                                                                <optgroup label="Getting started">
-                                                                    <option value="63">Business Planning</option>
-                                                                    <option value="59">Franchising</option>
-                                                                    <option value="61">Getting Started</option>
-                                                                    <option value="62">Legal Structure</option>
-                                                                    <option value="60">Location and Zoning</option>
-                                                                    <option value="109">Other</option>
-                                                                </optgroup>
-                                                                <optgroup label="Human Resources">
-                                                                    <option value="9">Compensation and Benefits</option>
-                                                                    <option value="11">Contractors and Consultants</option>
-                                                                    <option value="10">Employee Management</option>
-                                                                    <option value="14">Employee Training</option>
-                                                                    <option value="12">Personnel Policies</option>
-                                                                    <option value="13">Staffing and Recruiting</option>
-                                                                    <option value="122">Volunteer Management</option>
-                                                                    <option value="102">Other</option>
-                                                                </optgroup>
-                                                                <optgroup label="International">
-                                                                    <option value="15">Customs and Tariffs</option>
-                                                                    <option value="16">Exporting and Importing</option>
-                                                                    <option value="17">Global Markets</option>
-                                                                    <option value="19">Outsourcing</option>
-                                                                    <option value="103">Other</option>
-                                                                </optgroup>
-                                                                <optgroup label="Law and Legal">
-                                                                    <option value="20">Contracts</option>
-                                                                    <option value="22">Employment/Labor Law</option>
-                                                                    <option value="23">Immigration Law</option>
-                                                                    <option value="21">Intellectual Property</option>
-                                                                    <option value="25">Property Law</option>
-                                                                    <option value="26">Tax Law</option>
-                                                                    <option value="104">Other</option>
-                                                                </optgroup>
-                                                                <optgroup label="Management">
-                                                                    <option value="120">Board Development</option>
-                                                                    <option value="27">Business Insurance</option>
-                                                                    <option value="119">Business Strategy</option>
-                                                                    <option value="121">Fundraising</option>
-                                                                    <option value="28">Growth and Development</option>
-                                                                    <option value="29">Leadership</option>
-                                                                    <option value="32">Planning and Goal Setting</option>
-                                                                    <option value="33">Project Management</option>
-                                                                    <option value="36">Work-Life Balance</option>
-                                                                    <option value="105">Other</option>
-                                                                </optgroup>
-                                                                <optgroup label="Marketing">
-                                                                    <option value="37">Advertising and Promotion</option>
-                                                                    <option value="38">Branding and Identity</option>
-                                                                    <option value="39">Business Development</option>
-                                                                    <option value="40">Distribution</option>
-                                                                    <option value="42">Market Research</option>
-                                                                    <option value="41">Marketing Collateral</option>
-                                                                    <option value="43">Marketing Strategy</option>
-                                                                    <option value="44">Pricing</option>
-                                                                    <option value="111">Product Development</option>
-                                                                    <option value="45">Public Relations and Media</option>
-                                                                    <option value="125">Social Media</option>
-                                                                    <option value="46">Web Marketing</option>
-                                                                    <option value="112">Writing and Editing</option>
-                                                                    <option value="106">Other</option>
-                                                                </optgroup>
-                                                                <optgroup label="Operations">
-                                                                    <option value="47">Inventory Management</option>
-                                                                    <option value="48">Logistics</option>
-                                                                    <option value="49">Manufacturing</option>
-                                                                    <option value="113">Packaging and Labeling</option>
-                                                                    <option value="124">Process Improvement</option>
-                                                                    <option value="50">Procurement and Vendors</option>
-                                                                    <option value="123">Program Design &amp; Evaluation</option>
-                                                                    <option value="114">Quality Management</option>
-                                                                    <option value="51">Transportation and Delivery</option>
-                                                                    <option value="107">Other</option>
-                                                                </optgroup>
-                                                                <optgroup label="Sales">
-                                                                    <option value="52">Customer Service and CRM</option>
-                                                                    <option value="53">Government Contracts</option>
-                                                                    <option value="54">Lead Generation</option>
-                                                                    <option value="55">Retail and Consumer Sales</option>
-                                                                    <option value="56">Selling Products</option>
-                                                                    <option value="57">Selling Services</option>
-                                                                    <option value="58">Wholesale and B2B Sales</option>
-                                                                    <option value="108">Other</option>
-                                                                </optgroup>
-                                                                <optgroup label="Sustainability">
-                                                                    <option value="115">Energy Efficiency</option>
-                                                                    <option value="116">Green Business</option>
-                                                                    <option value="117">Green Products</option>
-                                                                    <option value="118">Other</option>
-                                                                </optgroup>
-                                                                <optgroup label="Technology and Internet">
-                                                                    <option value="65">E-Commerce</option>
-                                                                    <option value="66">Managing Technology</option>
-                                                                    <option value="64">Technology Planning</option>
-                                                                    <option value="67">Telecommunications</option>
-                                                                    <option value="68">Website Design</option>
-                                                                    <option value="110">Other</option>
-                                                                </optgroup>
-                                                            </select>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="form-group">
-                                                        <div class="col-md-12">
-                                                            <label>Primary industry?</label>
-                                                            <select class="form-control input-lg">
-                                                                <option value=""></option>
-                                                                <option value="30">Accounting and Tax Services</option>
-                                                                <option value="27">Agriculture</option>
-                                                                <option value="31">Animals and Pets</option>
-                                                                <option value="11">Architecture and Engineering</option>
-                                                                <option value="1">Artisan and Craft Work</option>
-                                                                <option value="2">Auto and Bike Mechanic</option>
-                                                                <option value="3">Beauty</option>
-                                                                <option value="33">Bookstore</option>
-                                                                <option value="4">Business Consulting and Coaching</option>
-                                                                <option value="5">Childcare</option>
-                                                                <option value="17">Cleaning Services</option>
-                                                                <option value="7">Construction and Contracting</option>
-                                                                <option value="55">Counseling and Mental Health</option>
-                                                                <option value="60">Digital Marketing and Social Media</option>
-                                                                <option value="35">Disability Services</option>
-                                                                <option value="25">Distribution and Logistics</option>
-                                                                <option value="56">E-Commerce</option>
-                                                                <option value="36">Education</option>
-                                                                <option value="34">Elder and Home Health Care</option>
-                                                                <option value="9">Entertainment and Events</option>
-                                                                <option value="10">Export and Import</option>
-                                                                <option value="8">Fashion</option>
-                                                                <option value="12">Financial Services and Insurance</option>
-                                                                <option value="37">Flowers and Gifts</option>
-                                                                <option value="14">Food and Grocery</option>
-                                                                <option value="28">Forestry</option>
-                                                                <option value="38">Furniture</option>
-                                                                <option value="23">Graphic and Web Design</option>
-                                                                <option value="16">Health and Wellness</option>
-                                                                <option value="6">Information Technology Services</option>
-                                                                <option value="39">Jewelry and Luxury Goods</option>
-                                                                <option value="15">Landscaping</option>
-                                                                <option value="40">Laundry and Tailoring</option>
-                                                                <option value="41">Legal Services</option>
-                                                                <option value="42">Manufacturing</option>
-                                                                <option value="18">Marketing and Advertising</option>
-                                                                <option value="57">Media and Publishing</option>
-                                                                <option value="26">Nonprofit and Social Enterprise</option>
-                                                                <option value="32">Performing Arts</option>
-                                                                <option value="43">Personal and Executive Assistance</option>
-                                                                <option value="21">Photography and A/V Services</option>
-                                                                <option value="44">Public Relations</option>
-                                                                <option value="19">Real Estate</option>
-                                                                <option value="46">Recreation and Outdoor Fitness</option>
-                                                                <option value="45">Recruiting and Staffing</option>
-                                                                <option value="24">Restaurant and Catering</option>
-                                                                <option value="59">Retail</option>
-                                                                <option value="29">Sustainability</option>
-                                                                <option value="47">Taxi and Limo Services</option>
-                                                                <option value="48">Translation and Localization</option>
-                                                                <option value="49">Travel and Hospitality</option>
-                                                                <option value="50">Veterinary</option>
-                                                                <option value="58">Web and Technology</option>
-                                                                <option value="51">Wine and Spirits</option>
-                                                                <option value="52">Writing and Editing</option>
-                                                            </select>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="form-group">
-                                                        <div class="col-md-12">
-                                                            <label>Professional background﻿</label>
-                                                            <textarea rows="6" value="" class="form-control input-lg" placeholder="What roles have you played in your career and how did you contribute? What experiences would you like to share in a mentoring connection? What accomplishments are you proud of?"></textarea>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="form-group">
-                                                        <div class="col-md-12">
-                                                            <label>How would you like to help entrepreneurs</label>
-                                                            <textarea rows="6" value="" class="form-control input-lg" placeholder="What types of business problems interest you? What activities do you prefer when advising others? In what ways do you think you can provide the most value?"></textarea>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="form-group">
-                                                        <div class="col-md-12">
-                                                            <label>What stage(s) of the entrepreneur's business do you prefer helping?</label>
-                                                            <div class="checkbox">
-                                                                <label>
-                                                                    <input type="checkbox">Concept
-                                                                </label>
-                                                            </div>
-                                                            <div class="checkbox">
-                                                                <label>
-                                                                    <input type="checkbox">Startup
-                                                                </label>
-                                                            </div>
-                                                            <div class="checkbox">
-                                                                <label>
-                                                                    <input type="checkbox">Existing
-                                                                </label>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="form-group">
-                                                        <div class="col-md-12">
-                                                            <label>How many years of business management experience do you have?</label>
-                                                            <input type="text" value="" class=" form-control input-lg" style="width: 100px;">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="form-group">
-                                                        <div class="col-md-12">
-                                                            <label>How many years of ownership experience do you have?﻿?</label>
-                                                            <input type="text" value="" class=" form-control input-lg" style="width: 100px;">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <h2 style="margin-left: 15px;">Your Info</h2>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="form-group">
-                                                        <div class="col-md-12">
-                                                            <label>Your profile image</label>
-                                                            <p>
-                                                                <i>Profiles with photos are much more likely to find a match. You may use a photo of yourself or your business.</i>
-                                                            </p>
-                                                            <input type="file" class=" form-control input-lg">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="form-group">
-                                                        <div class="col-md-12">
-                                                            <label>Website</label>
-                                                            <input type="text" value="" class=" form-control input-lg">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="form-group">
-                                                        <div class="col-md-12">
-                                                            <label>Company</label>
-                                                            <input type="text" value="" class=" form-control input-lg" style="width : 50%">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="form-group">
-                                                        <div class="col-md-12">
-                                                            <label>Role</label>
-                                                            <input type="text" value="" class=" form-control input-lg" style="width : 50%">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="form-group">
-                                                        <div class="col-md-12">
-                                                            <label>Language</label>
-                                                            <input type="text" value="" class=" form-control input-lg" style="width : 50%">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="form-group">
-                                                        <div class="col-md-12">
-                                                            <label>Address</label>
-                                                            <input type="text" value="" class=" form-control input-lg">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="form-group">
-                                                        <div class="col-md-12">
-                                                            <label>City</label>
-                                                            <input type="text" value="" class=" form-control input-lg" style="width : 50%">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="form-group">
-                                                        <div class="col-md-12">
-                                                            <label>Zipcode</label>
-                                                            <input type="text" value="" class=" form-control input-lg" style="width : 20%">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="form-group">
-                                                        <div class="col-md-12">
-                                                            <label>Phone Number</label>
-                                                            <input type="text" value="" class=" form-control input-lg" style="width : 50%">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="form-group">
-                                                        <div class="col-md-12">
-                                                            <label>Gender</label>
-                                                            <div class="radio">
-                                                                <label>
-                                                                    <input name="optionsRadios" type="radio">Male
-                                                                </label>
-                                                            </div>
-                                                            <div class="radio">
-                                                                <label>
-                                                                    <input name="optionsRadios" type="radio">Female
-                                                                </label>
-                                                            </div>
-                                                            <div class="radio">
-                                                                <label>
-                                                                    <input name="optionsRadios" type="radio">Unknown
-                                                                </label>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
                                                 <div class="row">
                                                     <div class="form-group">
                                                         <div class="col-md-12">
@@ -640,7 +297,8 @@
                                         </div>
                                         <div class="row">
                                             <div class="col-md-12">
-                                                <input type="submit" value="Register" class="btn btn-primary pull-right mb-xl" data-loading-text="Loading..." style="margin-right: 10px;">
+                                                <input type="submit" value="Register" class="btn btn-primary pull-right mb-xl" data-loading-text="Loading..."  >
+                                                <a href="mentee-register-step-2.html" class="btn btn-default pull-right"style="margin-right: 10px;">Back</a>
                                             </div>
                                         </div>
                                         </form>
@@ -741,21 +399,72 @@
     <script src="js/custom.js"></script>
     <!-- Theme Initialization Files -->
     <script src="js/theme.init.js"></script>
-    <!-- Google Analytics: Change UA-XXXXX-X to be your site's ID. Go to http://www.google.com/analytics/ for more information.
-		<script type="text/javascript">
-		
-			var _gaq = _gaq || [];
-			_gaq.push(['_setAccount', 'UA-12345678-1']);
-			_gaq.push(['_trackPageview']);
-		
-			(function() {
-			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-			})();
-		
-		</script>
-		 -->
+
+    <script>
+    var app = angular.module('app', ["ui.bootstrap","ui.bootstrap.tpls"]);
+
+    app.factory("commonDataService", ["$q" ,function ($q) {
+        
+        function getPlace(val) {
+            var deferred = $q.defer();
+
+            var _places = new google.maps.places.AutocompleteService();
+
+            // Place data from google
+            _places.getQueryPredictions({input: val}, function (predictions, status) {
+                if (status != google.maps.places.PlacesServiceStatus.OK) {
+                    deferred.reject('error');
+                } else {
+                    deferred.resolve(predictions);
+                }
+            });
+
+            return deferred.promise;
+        }
+        return {
+            getPlace: getPlace
+        };
+    }]);
+
+    app.controller('Step3Controller', function($scope, $locale, $timeout,commonDataService) {
+
+
+        
+
+        $scope.user = {
+            skills : [],
+            jobs : []
+        };
+        $scope.getPlace = function(val) {
+            console.log('mmeeee');
+            return commonDataService.getPlace(val).then(function(result) {
+                return result;
+            });
+        };
+
+        $scope.addSkill = function(){
+            if ($scope.user.skills.indexOf($scope.currentSkill) === -1) {
+                $scope.user.skills.push($scope.currentSkill);
+            }
+            $scope.currentSkill = "";
+            console.log('$scope.user.skills',$scope.user.skills);
+        }
+
+        $scope.addJob = function(){
+            if ($scope.user.jobs.indexOf($scope.preferedJob) === -1) {
+                $scope.user.jobs.push($scope.preferedJob);
+            }
+            $scope.preferedJob = "";
+            console.log('$scope.user.jobs',$scope.user.jobs);
+        }
+
+        
+
+
+
+    });
+    </script>
+   
 </body>
 
 </html>
