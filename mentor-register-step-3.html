@@ -35,7 +35,15 @@
     <!-- Head Libs -->
     <script src="vendor/modernizr/modernizr.js"></script>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+
+
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBzGq41QaQqdiH0KqbYM0IrwSh0EaGfio4
+        &signed_in=true&libraries=places">
+    </script>
     <!--[if IE]>
 			<link rel="stylesheet" href="css/ie.css">
 		<![endif]-->
@@ -160,7 +168,7 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="offer inactive">
+                            <li class="offer ">
                                 <div class="thumbnail sell-cards-thumb">
                                     <p style="margin-bottom : 5px"><i class="fa fa-briefcase fa-3x sell-cards-step-icon"></i></p>
                                     <div class="caption offer">
@@ -168,7 +176,7 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="offer inactive">
+                            <li class="offer ">
                                 <div class="thumbnail sell-cards-thumb">
                                     <p style="margin-bottom : 5px"><i class="fa fa-ellipsis-h fa-3x sell-cards-step-dot"></i> <i class="fa fa-ellipsis-h fa-3x sell-cards-step-dot"></i></p>
                                     <div class="caption offer">
@@ -176,7 +184,7 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="offer inactive" style="margin-left: -20px;">
+                            <li class="offer " style="margin-left: -20px;">
                                 <div class="thumbnail sell-cards-thumb">
                                     <p style="margin-bottom : 5px"><i class="fa fa-wrench fa-3x sell-cards-step-icon"></i></p>
                                     <div class="caption offer">
@@ -188,7 +196,8 @@
                     </div>
                     <div class="col-md-2 col-sm-12 col-xs-12 col-lg-2"></div>
                 </div>
-                <div class="row" ng-controller="Step1Controller">
+                
+                <div class="row" ng-controller="Step3Controller">
                     <div class="col-md-12">
                         <div class="featured-boxes">
                             <div class="row">
@@ -199,61 +208,89 @@
                                         <div class="box-content">
                                             <h4 class="heading-primary text-uppercase mb-md">Become A Mentor</h4>
                                             <form action="/" id="frmSignUp" method="post">
-                                                <div class="row">
-                                                    <div class="form-group">
-                                                        <div class="col-md-6">
-                                                            <label>First Name</label>
-                                                            <input type="text" value="" class="form-control input-lg">
-                                                        </div>
-                                                        <div class="col-md-6">
-                                                            <label>Last Name</label>
-                                                            <input type="text" value="" class="form-control input-lg">
-                                                        </div>
-                                                    </div>
-                                                </div>
+
                                                 <div class="row">
                                                     <div class="form-group">
                                                         <div class="col-md-12">
-                                                            <label>E-mail Address</label>
-                                                            <input type="text" value="" class="form-control input-lg">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="form-group">
-                                                        <div class="col-md-6">
-                                                            <label>Password</label>
-                                                            <input type="password" value="" class="form-control input-lg">
-                                                        </div>
-                                                        <div class="col-md-6">
-                                                            <label>Re-enter Password</label>
-                                                            <input type="password" value="" class="form-control input-lg">
+                                                            <label>Your Skill</label>
+                                                            <div>
+                                                                <span ng-repeat="skill in user.skills" >
+                                                                    <span class="label label-primary" >
+                                                                        {{skill}}
+                                                                    </span>&nbsp;
+                                                                </span>
+                                                            </div>
+                                                            <br>
+                                                            <div class="input-group input-group-lg">
+                                                              <input type="text" value="" class="form-control input-lg" ng-model="currentSkill">
+                                                              <span class="input-group-addon" id="sizing-addon1" ng-click="addSkill()">Add</span>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
 
                                                 <div class="row">
-                                                	<div class="form-group">
+                                                    <div class="form-group">
                                                         <div class="col-md-12">
-                                                            <label>Select your account type</label>
+                                                            <label>Describe your experience</label>
+                                                            <textarea rows="6" value="" class="form-control input-lg" placeholder=""></textarea>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row">
+                                                    <div class="form-group">
+                                                        <div class="col-md-12">
+                                                            <label>Related to organization</label>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input name="memberType" type="radio" ng-model="user.type" ng-change="typeChanged()" value="mentor">I want to help 
+                                                                    <input name="memberType" type="radio" ng-model="user.hasOrg" ng-change="hasOrg()" value="t">Yes
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input name="memberType" type="radio" ng-model="user.type" ng-change="typeChanged()" value="mentee" >I need help
+                                                                    <input name="memberType" type="radio" ng-model="user.hasOrg" ng-change="hasOrg()" value="f" >No
                                                                 </label>
                                                             </div>
                                                             
                                                         </div>
                                                     </div>
                                                 </div>
+
+                                                <div class="row" ng-show="user.hasOrg === 't'">
+                                                    <div class="form-group">
+                                                        <div class="col-md-12">
+                                                            <label>Organization Name</label>
+                                                            <input type="text" value="" class="form-control input-lg" >
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row">
+                                                    <div class="form-group">
+                                                        <div class="col-md-12">
+                                                            <label>Location</label>
+                                                            <input type="text" value="" class="form-control input-lg" ng-model="user.location" typeahead="place.description for place in getPlace($viewValue)" typeahead-on-select="onSelectPlace($item, $model, $label)">
+                                                        </div>
+                                                    </div>
+                                                </div>
                                                 
+                                                <div class="row">
+                                                    <div class="form-group">
+                                                        <div class="col-md-12">
+                                                            <label>Agree terms of use</label>
+                                                            <div class="checkbox">
+                                                                <label>
+                                                                    <input type="checkbox">I accept the terms of use. <a href="terms-of-use"> FULL LINK HERE</a>
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                        </div>
                                         <div class="row">
                                             <div class="col-md-12">
-                                            <a href="{{url}}" class="btn btn-primary pull-right mb-xl">Next</a>
+                                                <input type="submit" value="Register" class="btn btn-primary pull-right mb-xl" data-loading-text="Loading..." style="margin-right: 10px;">
                                             </div>
                                         </div>
                                         </form>
@@ -265,7 +302,6 @@
                         </div>
                     </div>
                 </div>
-                
             </div>
         </div>
     </div>
@@ -355,25 +391,63 @@
     <script src="js/custom.js"></script>
     <!-- Theme Initialization Files -->
     <script src="js/theme.init.js"></script>
-    
-    <script>
-    var app = angular.module('app', []);
 
-    app.controller('Step1Controller', function($scope, $locale, $timeout) {
+    <script>
+    var app = angular.module('app', ["ui.bootstrap","ui.bootstrap.tpls"]);
+
+    app.factory("commonDataService", ["$q" ,function ($q) {
+        
+        function getPlace(val) {
+            var deferred = $q.defer();
+
+            var _places = new google.maps.places.AutocompleteService();
+
+            // Place data from google
+            _places.getQueryPredictions({input: val}, function (predictions, status) {
+                if (status != google.maps.places.PlacesServiceStatus.OK) {
+                    deferred.reject('error');
+                } else {
+                    deferred.resolve(predictions);
+                }
+            });
+
+            return deferred.promise;
+        }
+        return {
+            getPlace: getPlace
+        };
+    }]);
+
+    app.controller('Step3Controller', function($scope, $locale, $timeout,commonDataService) {
+
+
         
 
-        $scope.user  = {};
-        $scope.url  = 'mentor-register-step-2.html';
-        $scope.typeChanged = function(){
-        	if ($scope.user.type == 'mentor') {
-        		$scope.url = 'mentor-register-step-2.html'
-        	} else {
-        		$scope.url = 'mentee-register-step-2.html';
-        	}
+        $scope.user = {
+            skills : []
+        };
+        $scope.getPlace = function(val) {
+            console.log('mmeeee');
+            return commonDataService.getPlace(val).then(function(result) {
+                return result;
+            });
+        };
+
+        $scope.addSkill = function(){
+            if ($scope.user.skills.indexOf($scope.currentSkill) === -1) {
+                $scope.user.skills.push($scope.currentSkill);
+            }
+            $scope.currentSkill = "";
+            console.log('$scope.user.skills',$scope.user.skills);
         }
+
+        
+
+
 
     });
     </script>
+   
 </body>
 
 </html>

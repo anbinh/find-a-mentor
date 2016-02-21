@@ -1894,76 +1894,76 @@ window.theme = {};
 	
 	theme = theme || {};
 	
-	var instanceName = '__sticky';
+    var instanceName = '__sticky';
 
-	var PluginSticky = function($el, opts) {
-		return this.initialize($el, opts);
-	};
+    var PluginSticky = function($el, opts) {
+        return this.initialize($el, opts);
+    };
 
-	PluginSticky.defaults = {
-		minWidth: 991,
-		activeClass: 'sticky-active'
-	};
+    PluginSticky.defaults = {
+        minWidth: 991,
+        activeClass: 'sticky-active'
+    };
 
-	PluginSticky.prototype = {
-		initialize: function($el, opts) {
-			if ( $el.data( instanceName ) ) {
-				return this;
-			}
+    PluginSticky.prototype = {
+        initialize: function($el, opts) {
+            if ($el.data(instanceName)) {
+                return this;
+            }
 
-			this.$el = $el;
+            this.$el = $el;
 
-			this
-				.setData()
-				.setOptions(opts)
-				.build();
+            this
+                .setData()
+                .setOptions(opts)
+                .build();
 
-			return this;
-		},
+            return this;
+        },
 
-		setData: function() {
-			this.$el.data(instanceName, this);
+        setData: function() {
+            this.$el.data(instanceName, this);
 
-			return this;
-		},
+            return this;
+        },
 
-		setOptions: function(opts) {
-			this.options = $.extend(true, {}, PluginSticky.defaults, opts, {
-				wrapper: this.$el
-			});
+        setOptions: function(opts) {
+            this.options = $.extend(true, {}, PluginSticky.defaults, opts, {
+                wrapper: this.$el
+            });
 
-			return this;
-		},
+            return this;
+        },
 
-		build: function() {
-			if (!($.isFunction($.fn.pin))) {
-				return this;
-			}
+        build: function() {
+            if (!($.isFunction($.fn.pin))) {
+                return this;
+            }
 
-			this.options.wrapper.pin(this.options);
+            this.options.wrapper.pin(this.options);
 
-			return this;
-		}
-	};
+            return this;
+        }
+    };
 
-	// expose to scope
-	$.extend(theme, {
-		PluginSticky: PluginSticky
-	});
+    // expose to scope
+    $.extend(theme, {
+        PluginSticky: PluginSticky
+    });
 
-	// jquery plugin
-	$.fn.themePluginSticky = function(opts) {
-		return this.map(function() {
-			var $this = $(this);
+    // jquery plugin
+    $.fn.themePluginSticky = function(opts) {
+        return this.map(function() {
+            var $this = $(this);
 
-			if ($this.data(instanceName)) {
-				return $this.data(instanceName);
-			} else {
-				return new PluginSticky($this, opts);
-			}
-			
-		});
-	}
+            if ($this.data(instanceName)) {
+                return $this.data(instanceName);
+            } else {
+                return new PluginSticky($this, opts);
+            }
+
+        });
+    }
 
 }).apply(this, [ window.theme, jQuery ]);
 
@@ -2673,235 +2673,235 @@ window.theme = {};
 
 	theme = theme || {};
 
-	var initialized = false;
+    var initialized = false;
 
-	$.extend(theme, {
+    $.extend(theme, {
 
-		StickyMenu: {
+        StickyMenu: {
 
-			defaults: {
-				wrapper: $('#header'),
-				stickyEnabled: true,
-				stickyEnableOnBoxed: true,
-				stickyEnableOnMobile: true,
-				stickyWithGap: true,
-				stickyChangeLogoSize: true,
-				stickyBodyPadding: true,
-				menuAfterHeader: false,
-				alwaysStickyEnabled: false,
-				logoPaddingTop: 28,
-				logoSmallWidth: 82,
-				logoSmallHeight: 40
-			},
+            defaults: {
+                wrapper: $('#header'),
+                stickyEnabled: true,
+                stickyEnableOnBoxed: true,
+                stickyEnableOnMobile: true,
+                stickyWithGap: true,
+                stickyChangeLogoSize: true,
+                stickyBodyPadding: true,
+                menuAfterHeader: false,
+                alwaysStickyEnabled: false,
+                logoPaddingTop: 28,
+                logoSmallWidth: 82,
+                logoSmallHeight: 40
+            },
 
-			initialize: function($wrapper, opts) {
-				if (initialized) {
-					return this;
-				}
+            initialize: function($wrapper, opts) {
+                if (initialized) {
+                    return this;
+                }
 
-				initialized = true;
-				this.$wrapper = ($wrapper || this.defaults.wrapper);
+                initialized = true;
+                this.$wrapper = ($wrapper || this.defaults.wrapper);
 
-				this
-					.setOptions(opts)
-					.build()
-					.events();
+                this
+                    .setOptions(opts)
+                    .build()
+                    .events();
 
-				return this;
-			},
+                return this;
+            },
 
-			setOptions: function(opts) {
-				this.options = $.extend(true, {}, this.defaults, opts, this.$wrapper.data('plugin-options'));
+            setOptions: function(opts) {
+                this.options = $.extend(true, {}, this.defaults, opts, this.$wrapper.data('plugin-options'));
 
-				return this;
-			},
+                return this;
+            },
 
-			build: function() {
-				if (!this.options.stickyEnableOnBoxed && $('body').hasClass('boxed') || !this.options.stickyEnabled) {
-					return this;
-				}
+            build: function() {
+                if (!this.options.stickyEnableOnBoxed && $('body').hasClass('boxed') || !this.options.stickyEnabled) {
+                    return this;
+                }
 
-				var self = this,
-					$window = $(window);
-					$body = $('body'),
-					$header = self.$wrapper,
-					$headerContainer = $header.parent(),
-					$headerNavItems = $header.find('ul.nav-main > li > a'),
-					$logoWrapper = $header.find('.logo'),
-					$logo = $logoWrapper.find('img'),
-					logoWidth = $logo.attr('width'),
-					logoHeight = $logo.attr('height'),
-					logoPaddingTop = parseInt($logo.attr('data-sticky-padding') ? $logo.attr('data-sticky-padding') : self.options.logoPaddingTop),
-					logoSmallWidth = parseInt($logo.attr('data-sticky-width') ? $logo.attr('data-sticky-width') : self.options.logoSmallWidth),
-					logoSmallHeight = parseInt($logo.attr('data-sticky-height') ? $logo.attr('data-sticky-height') : self.options.logoSmallHeight),
-					headerHeight = $header.height(),
-					stickyGap = 0;
+                var self = this,
+                    $window = $(window);
+                $body = $('body'),
+                $header = self.$wrapper,
+                $headerContainer = $header.parent(),
+                $headerNavItems = $header.find('ul.nav-main > li > a'),
+                $logoWrapper = $header.find('.logo'),
+                $logo = $logoWrapper.find('img'),
+                logoWidth = $logo.attr('width'),
+                logoHeight = $logo.attr('height'),
+                logoPaddingTop = parseInt($logo.attr('data-sticky-padding') ? $logo.attr('data-sticky-padding') : self.options.logoPaddingTop),
+                logoSmallWidth = parseInt($logo.attr('data-sticky-width') ? $logo.attr('data-sticky-width') : self.options.logoSmallWidth),
+                logoSmallHeight = parseInt($logo.attr('data-sticky-height') ? $logo.attr('data-sticky-height') : self.options.logoSmallHeight),
+                headerHeight = $header.height(),
+                stickyGap = 0;
 
-				if (this.options.menuAfterHeader) {
-					$headerContainer.css('min-height', $header.height());
-				}
+                if (this.options.menuAfterHeader) {
+                    $headerContainer.css('min-height', $header.height());
+                }
 
-				$window.afterResize(function() {
-					$headerContainer.css('min-height', $header.height());
-				});
+                $window.afterResize(function() {
+                    $headerContainer.css('min-height', $header.height());
+                });
 
-				self.checkStickyMenu = function() {
+                self.checkStickyMenu = function() {
 
-					if ((!self.options.stickyEnableOnBoxed && $body.hasClass('boxed')) || ($window.width() < 991 && !self.options.stickyEnableOnMobile)) {
-						self.stickyMenuDeactivate();
-						$header.removeClass('fixed')
-						return false;
-					}
+                    if ((!self.options.stickyEnableOnBoxed && $body.hasClass('boxed')) || ($window.width() < 991 && !self.options.stickyEnableOnMobile)) {
+                        self.stickyMenuDeactivate();
+                        $header.removeClass('fixed')
+                        return false;
+                    }
 
-					if (self.options.stickyWithGap) {
-						stickyGap = ((headerHeight - 15) - logoSmallHeight);
-					} else {
-						stickyGap = 0;
-					}
+                    if (self.options.stickyWithGap) {
+                        stickyGap = ((headerHeight - 15) - logoSmallHeight);
+                    } else {
+                        stickyGap = 0;
+                    }
 
-					// Menu After Header
-					if (!this.options.menuAfterHeader) {
+                    // Menu After Header
+                    if (!this.options.menuAfterHeader) {
 
-						if ($window.scrollTop() > stickyGap) {
-							self.stickyMenuActivate();
-						} else {
-							self.stickyMenuDeactivate();
-						}
+                        if ($window.scrollTop() > stickyGap) {
+                            self.stickyMenuActivate();
+                        } else {
+                            self.stickyMenuDeactivate();
+                        }
 
-					} else {
+                    } else {
 
-						if ($window.scrollTop() > $headerContainer.offset().top) {
-							$header.addClass('fixed');
-						} else {
-							$header.removeClass('fixed');
-						}
+                        if ($window.scrollTop() > $headerContainer.offset().top) {
+                            $header.addClass('fixed');
+                        } else {
+                            $header.removeClass('fixed');
+                        }
 
-					}
+                    }
 
-				}
+                }
 
-				self.stickyMenuActivate = function() {
+                self.stickyMenuActivate = function() {
 
-					if ($body.hasClass('sticky-menu-active')) {
-						return false;
-					}
+                    if ($body.hasClass('sticky-menu-active')) {
+                        return false;
+                    }
 
-					$logo.stop(true, true);
+                    $logo.stop(true, true);
 
-					$body.addClass('sticky-menu-active').removeClass('sticky-menu-deactive');
+                    $body.addClass('sticky-menu-active').removeClass('sticky-menu-deactive');
 
-					if (self.options.stickyBodyPadding) {
-						$body.css('padding-top', headerHeight);
-					}
+                    if (self.options.stickyBodyPadding) {
+                        $body.css('padding-top', headerHeight);
+                    }
 
-					// Flat Menu Items
-					if ($header.hasClass('flat-menu')) {
-						$headerNavItems.addClass('sticky-menu-active');
-					}
+                    // Flat Menu Items
+                    if ($header.hasClass('flat-menu')) {
+                        $headerNavItems.addClass('sticky-menu-active');
+                    }
 
-					if (self.options.stickyChangeLogoSize) {
+                    if (self.options.stickyChangeLogoSize) {
 
-						$logoWrapper.addClass('logo-sticky-active');
+                        $logoWrapper.addClass('logo-sticky-active');
 
-						$logo.animate({
-							width: logoSmallWidth,
-							height: logoSmallHeight,
-							top: logoPaddingTop + 'px'
-						}, 200, function() {
-							$.event.trigger({
-								type: 'stickyMenu.active'
-							});
-						});
+                        $logo.animate({
+                            width: logoSmallWidth,
+                            height: logoSmallHeight,
+                            top: logoPaddingTop + 'px'
+                        }, 200, function() {
+                            $.event.trigger({
+                                type: 'stickyMenu.active'
+                            });
+                        });
 
-					} else {
-						$.event.trigger({
-							type: 'stickyMenu.active'
-						});
-					}
+                    } else {
+                        $.event.trigger({
+                            type: 'stickyMenu.active'
+                        });
+                    }
 
-				}
+                }
 
-				self.stickyMenuDeactivate = function() {
+                self.stickyMenuDeactivate = function() {
 
-					if ($body.hasClass('sticky-menu-active')) {
+                    if ($body.hasClass('sticky-menu-active')) {
 
-						$body.removeClass('sticky-menu-active').addClass('sticky-menu-deactive');
+                        $body.removeClass('sticky-menu-active').addClass('sticky-menu-deactive');
 
-						if (self.options.stickyBodyPadding) {
-							$body.css('padding-top', 0);
-						}
+                        if (self.options.stickyBodyPadding) {
+                            $body.css('padding-top', 0);
+                        }
 
-						// Flat Menu Items
-						if ($header.hasClass('flat-menu')) {
-							$headerNavItems.removeClass('sticky-menu-active');
-						}
+                        // Flat Menu Items
+                        if ($header.hasClass('flat-menu')) {
+                            $headerNavItems.removeClass('sticky-menu-active');
+                        }
 
-						if (self.options.stickyChangeLogoSize) {
+                        if (self.options.stickyChangeLogoSize) {
 
-							$logoWrapper.removeClass('logo-sticky-active');
+                            $logoWrapper.removeClass('logo-sticky-active');
 
-							$logo.animate({
-								width: logoWidth,
-								height: logoHeight,
-								top: '0px'
-							}, 200, function() {
-								$.event.trigger({
-									type: 'stickyMenu.deactive'
-								});
-								$window.trigger('resize');
-							});
+                            $logo.animate({
+                                width: logoWidth,
+                                height: logoHeight,
+                                top: '0px'
+                            }, 200, function() {
+                                $.event.trigger({
+                                    type: 'stickyMenu.deactive'
+                                });
+                                $window.trigger('resize');
+                            });
 
-						} else {
-							$.event.trigger({
-								type: 'stickyMenu.deactive'
-							});
-						}
+                        } else {
+                            $.event.trigger({
+                                type: 'stickyMenu.deactive'
+                            });
+                        }
 
-					}
+                    }
 
-				}
+                }
 
-				if (!self.options.alwaysStickyEnabled) {
+                if (!self.options.alwaysStickyEnabled) {
 
-					$body.addClass('sticky-menu-deactive');
+                    $body.addClass('sticky-menu-deactive');
 
-					self.checkStickyMenu();
+                    self.checkStickyMenu();
 
-				} else {
+                } else {
 
-					$body.addClass('sticky-menu-active always-sticky').removeClass('sticky-menu-deactive');
+                    $body.addClass('sticky-menu-active always-sticky').removeClass('sticky-menu-deactive');
 
-					if (self.options.stickyBodyPadding) {
-						$body.css('padding-top', $header.height() + ($header.hasClass('narrow') ? 0 : 22));
-					}
+                    if (self.options.stickyBodyPadding) {
+                        $body.css('padding-top', $header.height() + ($header.hasClass('narrow') ? 0 : 22));
+                    }
 
-				}
+                }
 
-				return this;
-			},
+                return this;
+            },
 
-			events: function() {
-				var self = this;
+            events: function() {
+                var self = this;
 
-				if (!this.options.stickyEnableOnBoxed && $('body').hasClass('boxed') || !this.options.stickyEnabled) {
-					return this;
-				}
+                if (!this.options.stickyEnableOnBoxed && $('body').hasClass('boxed') || !this.options.stickyEnabled) {
+                    return this;
+                }
 
-				if (!self.options.alwaysStickyEnabled) {
-					$(window).on('scroll resize', function() {
-						self.checkStickyMenu();
-					});
-				}
+                if (!self.options.alwaysStickyEnabled) {
+                    $(window).on('scroll resize', function() {
+                        self.checkStickyMenu();
+                    });
+                }
 
-				$('.btn-responsive-nav').on('click', function(e) {
-					e.preventDefault();
-				});
+                $('.btn-responsive-nav').on('click', function(e) {
+                    e.preventDefault();
+                });
 
-				return this;
-			}
+                return this;
+            }
 
-		}
+        }
 
-	});
+    });
 
 }).apply(this, [window.theme, jQuery]);

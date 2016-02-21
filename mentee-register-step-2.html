@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Mentor Registration</title>
+    <meta name="keywords" content="Mentor Registration" />
+    <meta name="description" content="Mentor Registration">
+    <meta name="author" content="tinhoc@outlook.com">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Web Fonts  -->
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800%7CShadows+Into+Light" rel="stylesheet" type="text/css">
+    <!-- Vendor CSS -->
+    <link rel="stylesheet" href="vendor/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="vendor/fontawesome/css/font-awesome.css">
+    <link rel="stylesheet" href="vendor/owlcarousel/owl.carousel.min.css" media="screen">
+    <link rel="stylesheet" href="vendor/owlcarousel/owl.theme.default.min.css" media="screen">
+    <link rel="stylesheet" href="vendor/magnific-popup/magnific-popup.css" media="screen">
+    <!-- Theme CSS -->
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/theme-elements.css">
+    <link rel="stylesheet" href="css/theme-blog.css">
+    <link rel="stylesheet" href="css/theme-shop.css">
+    <link rel="stylesheet" href="css/theme-animate.css">
+    <!-- Skin CSS -->
+    <link rel="stylesheet" href="css/skins/default.css">
+    <!-- Theme Custom CSS -->
+    <link rel="stylesheet" href="css/custom.css">
+    <!-- Head Libs -->
+    <script src="vendor/modernizr/modernizr.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/css/bootstrap-select.min.css">
+    <!--[if IE]>
+            <link rel="stylesheet" href="css/ie.css">
+        <![endif]-->
+    <!--[if lte IE 8]>
+            <script src="vendor/respond/respond.js"></script>
+            <script src="vendor/excanvas/excanvas.js"></script>
+        <![endif]-->
+</head>
+
+<body ng-app="app">
+    <div class="body">
+        <header id="header">
+            <div class="container">
+                <div class="logo">
+                    <a href="index.html">
+                        <img alt="" width="250" height="50" data-sticky-width="200" data-sticky-height="40" src="img/logo.png">
+                    </a>
+                </div>
+                <div class="search">
+                    <form id="searchForm" action="page-search-results.html" method="get">
+                        <div class="input-group">
+                            <input type="text" class="form-control search" name="q" id="q" placeholder="Search..." required>
+                            <span class="input-group-btn">
+                                    <button class="btn btn-default" type="submit"><i class="fa fa-search"></i></button>
+                                </span>
+                        </div>
+                    </form>
+                </div>
+                <nav class="nav-top">
+                    <ul class="nav nav-pills nav-top">
+                        <li>
+                            <a href="about-us.html"><i class="fa fa-angle-right"></i>About Us</a>
+                        </li>
+                        <li>
+                            <a href="contact-us.html"><i class="fa fa-angle-right"></i>Contact Us</a>
+                        </li>
+                    </ul>
+                </nav>
+                <button class="btn btn-responsive-nav btn-inverse" data-toggle="collapse" data-target=".nav-main-collapse">
+                    <i class="fa fa-bars"></i>
+                </button>
+            </div>
+            <div class="navbar-collapse nav-main-collapse collapse">
+                <div class="container">
+                    <ul class="social-icons">
+                        <li class="facebook"><a href="http://www.facebook.com/" target="_blank" title="Facebook">Facebook</a></li>
+                        <li class="twitter"><a href="http://www.twitter.com/" target="_blank" title="Twitter">Twitter</a></li>
+                        <li class="linkedin"><a href="http://www.linkedin.com/" target="_blank" title="Linkedin">Linkedin</a></li>
+                    </ul>
+                    <nav class="nav-main mega-menu">
+                        <ul class="nav nav-pills nav-main" id="mainMenu">
+                            <li class="dropdown ">
+                                <a class="" href="index.html">
+                                        Home
+                                    </a>
+                            </li>
+                            <li class="dropdown mega-menu-item active">
+                                <a class="dropdown-toggle" href="#">
+                                        Registration
+                                    </a>
+                                <ul class="dropdown-menu ">
+                                    <li><a href="/mentor-register.html">Mentor</a></li>
+                                    <li><a href="/mentee-register.html">Mentee</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown ">
+                                <a class="" href="/login.html">
+                                        Login
+                                    </a>
+                            </li>
+                            <li class="dropdown ">
+                                <a class="" href="index.html">
+                                        Blog
+                                    </a>
+                            </li>
+                            <li class="dropdown ">
+                                <a class="" href="index.html">
+                                        Mentorship Partnership
+                                    </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <div role="main" class="main">
+            <section class="page-header page-header-color page-header-primary page-header-more-padding">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <ul class="breadcrumb">
+                                <li><a href="#">Home</a></li>
+                                <li class="active">Mentor Registration</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row ">
+                        <div class="col-md-12">
+                            <h1>Register</h1>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="container" ng-controller="Step2Controller">
+                <div class="row">
+                    <div class="col-md-2 col-sm-12 col-xs-12 col-lg-2"></div>
+                    <div class="col-md-8 col-sm-12 col-xs-12 col-lg-8 text-center">
+                        <ol class="breadcrumb offer">
+                            <li>
+                                <div class="thumbnail sell-cards-thumb">
+                                    <p style="margin-bottom : 5px"><i class="fa fa-user fa-3x sell-cards-step-icon"></i></p>
+                                    <div class="caption offer">
+                                        <p class="sell-cards-step-txt">1.Basic Info</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="offer">
+                                <div class="thumbnail sell-cards-thumb">
+                                    <p style="margin-bottom : 5px"><i class="fa fa-ellipsis-h fa-3x sell-cards-step-dot"></i> <i class="fa fa-ellipsis-h fa-3x sell-cards-step-dot"></i></p>
+                                    <div class="caption offer">
+                                        <p class="sell-cards-step-txt">&nbsp;</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="offer ">
+                                <div class="thumbnail sell-cards-thumb">
+                                    <p style="margin-bottom : 5px"><i class="fa fa-briefcase fa-3x sell-cards-step-icon"></i></p>
+                                    <div class="caption offer">
+                                        <p class="sell-cards-step-txt">2.Career</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="offer inactive">
+                                <div class="thumbnail sell-cards-thumb">
+                                    <p style="margin-bottom : 5px"><i class="fa fa-ellipsis-h fa-3x sell-cards-step-dot"></i> <i class="fa fa-ellipsis-h fa-3x sell-cards-step-dot"></i></p>
+                                    <div class="caption offer">
+                                        <p class="sell-cards-step-txt">&nbsp;</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="offer inactive" style="margin-left: -20px;">
+                                <div class="thumbnail sell-cards-thumb">
+                                    <p style="margin-bottom : 5px"><i class="fa fa-wrench fa-3x sell-cards-step-icon"></i></p>
+                                    <div class="caption offer">
+                                        <p class="sell-cards-step-txt">3.Skills</p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="col-md-2 col-sm-12 col-xs-12 col-lg-2"></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="featured-boxes">
+                            <div class="row">
+                                <div class="col-sm-3">
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="featured-box featured-box-primary align-left mt-xlg">
+                                        <div class="box-content">
+                                            <h4 class="heading-primary text-uppercase mb-md">Become A Mentee</h4>
+                                            <form action="/" id="frmSignUp" method="post">
+                                                <div class="row">
+                                                    <div class="form-group">
+                                                        <div class="col-md-12">
+                                                            <label>Primary Functional Area</label>
+                                                            <select class="form-control input-lg selectpicker" id="category" ng-disabled="isLoading" ng-model="user.primary_area" ng-change="areaChanged()" title="Please Select Category..." ng-options="area.name for area in primaryAreas track by area.name" data-dropup-auto="false" data-live-search="true">
+                                                                <option data-hidden="true"></option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <div class="col-md-12">
+                                                            <label>Secondary Functional Area</label>
+                                                            <select class="form-control selectpicker" id="sub-categories" multiple 
+                                                            ng-disabled="isLoading" 
+                                                            ng-model="media.subcategories" 
+                                                            ng-change="subCatChanged()" title="Please Select Subcategory..." 
+                                                            ng-options="sub.name group by sub.type for sub in user.primary_area.subs track by sub.name"
+                                                            data-max-options="3" data-dropup-auto="false">
+                                                                <option data-hidden="true"></option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+
+                                                    
+                                                </div>
+                                                <div class="row ">
+                                                    <div class="col-md-12">
+                                                        <a href="/mentee-register-step-3.html" class="btn btn-primary pull-right mb-xl">Next</a>
+                                                    </div>
+                                                </div>
+                                        </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-2">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-ribbon">
+                    <span>Get in Touch</span>
+                </div>
+                <div class="col-md-8">
+                    <div class="contact-details">
+                        <h4 class="heading-primary">Contact Us</h4>
+                        <ul class="contact">
+                            <li>
+                                <p><i class="fa fa-map-marker"></i> <strong>Address:</strong> 1234 Street Name, City Name, Canada</p>
+                            </li>
+                            <li>
+                                <p><i class="fa fa-phone"></i> <strong>Phone:</strong> (123) 456-7890</p>
+                            </li>
+                            <li>
+                                <p><i class="fa fa-envelope"></i> <strong>Email:</strong> <a href="mailto:tinhoc@outlook.com">tinhoc@outlook.com</a></p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <h4 class="heading-primary">Follow Us</h4>
+                    <div class="social-icons">
+                        <ul class="social-icons">
+                            <li class="facebook"><a href="http://www.facebook.com/" target="_blank" data-placement="bottom" data-tooltip title="Facebook">Facebook</a></li>
+                            <li class="twitter"><a href="http://www.twitter.com/" target="_blank" data-placement="bottom" data-tooltip title="Twitter">Twitter</a></li>
+                            <li class="linkedin"><a href="http://www.linkedin.com/" target="_blank" data-placement="bottom" data-tooltip title="Linkedin">Linkedin</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-1">
+                        <a href="index.html" class="logo">
+                            <img alt=" Website Template" class="img-responsive" src="img/logo.png">
+                        </a>
+                    </div>
+                    <div class="col-md-7">
+                        <p>© Copyright 2015. All Rights Reserved.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <nav id="sub-menu">
+                            <ul>
+                                <li><a href="page-faq.html">FAQ's</a></li>
+                                <li><a href="terms-of-use.html">Terms Of Use</a></li>
+                                <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    </div>
+    <!-- Vendor -->
+    <!--[if lt IE 9]>
+        <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+        <![endif]-->
+    <!--[if gte IE 9]><!-->
+    <script src="vendor/jquery/jquery.js"></script>
+    <!--<![endif]-->
+    <script src="vendor/jquery.appear/jquery.appear.js"></script>
+    <script src="vendor/jquery.easing/jquery.easing.js"></script>
+    <script src="vendor/jquery-cookie/jquery-cookie.js"></script>
+    <script src="vendor/bootstrap/bootstrap.js"></script>
+    <script src="vendor/common/common.js"></script>
+    <script src="vendor/jquery.validation/jquery.validation.js"></script>
+    <script src="vendor/jquery.stellar/jquery.stellar.js"></script>
+    <script src="vendor/jquery.easy-pie-chart/jquery.easy-pie-chart.js"></script>
+    <script src="vendor/jquery.gmap/jquery.gmap.js"></script>
+    <script src="vendor/isotope/jquery.isotope.js"></script>
+    <script src="vendor/owlcarousel/owl.carousel.js"></script>
+    <script src="vendor/jflickrfeed/jflickrfeed.js"></script>
+    <script src="vendor/magnific-popup/jquery.magnific-popup.js"></script>
+    <script src="vendor/vide/vide.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/js/bootstrap-select.min.js"></script>
+    <!-- Theme Base, Components and Settings -->
+    <script src="js/theme.js"></script>
+    <!-- Theme Custom -->
+    <script src="js/custom.js"></script>
+    <!-- Theme Initialization Files -->
+    <script src="js/theme.init.js"></script>
+    <script>
+    var app = angular.module('app', []);
+
+    app.controller('Step2Controller', function($scope, $locale, $timeout) {
+        console.log('STEP 2');
+
+        $scope.user = {};
+
+        $scope.primaryAreas = [
+            {
+                name: "Career",
+                subs: [{
+                    "name": "Tax & Accounting",
+                    "type": "Accounting, Finance and Insurance"
+                }, {
+                    "name": "Account Payable, Receivable and Collection",
+                    "type": "Accounting, Finance and Insurance"
+                }, {
+                    "name": "Financial Product Sales, Insurance and Brokerage",
+                    "type": "Accounting, Finance and Insurance"
+                }, {
+                    "name": "Corporate Finance and Accounting",
+                    "type": "Accounting, Finance and Insurance"
+                }, {
+                    "name": "Real Estate Leasing and Acquisition",
+                    "type": "Accounting, Finance and Insurance"
+                }, {
+                    "name": "Banking, Finance & Investment",
+                    "type": "Accounting, Finance and Insurance"
+                }, {
+                    "name": "Payroll, Benefits & Compensation",
+                    "type": "Human Resource"
+                }, {
+                    "name": "Recruiting and Sourcing",
+                    "type": "Human Resource"
+                }, {
+                    "name": "Human Resource General",
+                    "type": "Human Resource"
+                }, {
+                    "name": "Attorney/ Legal Cousel",
+                    "type": "Law and Legal"
+                }, {
+                    "name": "Paralegal, Legal ecretary, and Real Estate Law",
+                    "type": "Law and Legal"
+                }, {
+                    "name": "Brand and Product Marketing",
+                    "type": "Marketing and Product"
+                }, {
+                    "name": "Advertising and Public Relations",
+                    "type": "Marketing and Product"
+                }, {
+                    "name": "Digital/eMarketing",
+                    "type": "Marketing and Product"
+                }, {
+                    "name": "Direct Marketing",
+                    "type": "Marketing and Product"
+                }, {
+                    "name": "Call Center and Technical Customer Support",
+                    "type": "Marketing and Product"
+                }, {
+                    "name": "Field Sales and inside Sales",
+                    "type": "Sales"
+                }, {
+                    "name": "Real Estate Agent and Broker",
+                    "type": "Sales"
+                }, {
+                    "name": "Financial Product Sales, Insurance and Brokerage",
+                    "type": "Sales"
+                }, {
+                    "name": "Reservation, Ticketing  and Retail",
+                    "type": "Sales"
+                }, {
+                    "name": "Call Center and Technical Customer Support",
+                    "type": "Sales"
+                }, {
+                    "name": "Retail and Counter Sales",
+                    "type": "Sales"
+                }, {
+                    "name": "Enterprise Software Implementation & Consulting",
+                    "type": "Information Technology and Internet"
+                }, {
+                    "name": "Software, UI and Web Development",
+                    "type": "Information Technology and Internet"
+                }, {
+                    "name": "Database Development and Administration",
+                    "type": "Information Technology and Internet"
+                }, {
+                    "name": "Desktop Services and Support",
+                    "type": "Information Technology and Internet"
+                }, {
+                    "name": "Computer Network, Security and Server Adminsitration",
+                    "type": "Information Technology and Internet"
+                }, {
+                    "name": "Project Management and Solution Architecture",
+                    "type": "Information Technology and Internet"
+                }, {
+                    "name": "General Other IT",
+                    "type": "Information Technology and Internet"
+                }, {
+                    "name": "Filing and Records Management",
+                    "type": "Office and Administrative"
+                }, {
+                    "name": "Office and Property Management",
+                    "type": "Office and Administrative"
+                }, {
+                    "name": "Secretary and Executive Assistance",
+                    "type": "Office and Administrative"
+                }, {
+                    "name": "Data Entry and Order Processing",
+                    "type": "Office and Administrative"
+                }, {
+                    "name": "General, Other - Administrative and Clerical",
+                    "type": "Office and Administrative"
+                }, {
+                    "name": "Electrician, wire and Cable Install",
+                    "type": "Skilled Trade and Building Construction"
+                }, {
+                    "name": "HVAC",
+                    "type": "Skilled Trade and Building Construction"
+                }, {
+                    "name": "Plumbing and Pipefitting",
+                    "type": "Skilled Trade and Building Construction"
+                }, {
+                    "name": "Carpentry and Framing",
+                    "type": "Skilled Trade and Building Construction"
+                }, {
+                    "name": "Concrete And Masonary",
+                    "type": "Skilled Trade and Building Construction"
+                }, {
+                    "name": "Roofing, Flooring, Tiling, and Painting",
+                    "type": "Skilled Trade and Building Construction"
+                }, {
+                    "name": "Auto Repair and Maintanance",
+                    "type": "Skilled Trade and Building Construction"
+                }, {
+                    "name": "Janitorial and Cleaning",
+                    "type": "Skilled Trade and Building Construction"
+                }, {
+                    "name": "Equipment, Ironwork, Maintenance and Repair",
+                    "type": "Skilled Trade and Building Construction"
+                }, {
+                    "name": "General, Other",
+                    "type": "Skilled Trade and Building Construction"
+                }, {
+                    "name": "Dental",
+                    "type": "Medical and Healthcare"
+                }, {
+                    "name": "Pharmacy, Laboratory and Pathology",
+                    "type": "Medical and Healthcare"
+                }, {
+                    "name": "Medical Therapy and Rehab Services",
+                    "type": "Medical and Healthcare"
+                }, {
+                    "name": "Medical Practitioner and Nursing",
+                    "type": "Medical and Healthcare"
+                }, {
+                    "name": "Optical",
+                    "type": "Medical and Healthcare"
+                }, {
+                    "name": "Nutrition and Diet",
+                    "type": "Health, Fitness, and Sports"
+                }, {
+                    "name": "Fitness ",
+                    "type": "Health, Fitness, and Sports"
+                }, {
+                    "name": "Sports",
+                    "type": "Health, Fitness, and Sports"
+                }, {
+                    "name": "Software and Web Training",
+                    "type": "Education and Training"
+                }, {
+                    "name": "School Classroom Teaching",
+                    "type": "Education and Training"
+                }, {
+                    "name": "Early Childhood Care and Development",
+                    "type": "Education and Training"
+                }, {
+                    "name": "Corporate Development and Training",
+                    "type": "Education and Training"
+                }, {
+                    "name": "College and University Teaching",
+                    "type": "Education and Training"
+                }, {
+                    "name": "Food Prepearation and Cooking",
+                    "type": "Food Services and Hospitality"
+                }, {
+                    "name": "Management, Front Desk and Reception",
+                    "type": "Food Services and Hospitality"
+                }, {
+                    "name": "Food and Beverage Serving",
+                    "type": "Food Services and Hospitality"
+                }, {
+                    "name": "General, Others",
+                    "type": "Food Services and Hospitality"
+                }, {
+                    "name": "Aeronautic and Avionic Engineering",
+                    "type": "Engineering"
+                }, {
+                    "name": "CAD, CAM and Drafting",
+                    "type": "Engineering"
+                }, {
+                    "name": "Chemical Engineering",
+                    "type": "Engineering"
+                }, {
+                    "name": "Civil and Structural Engineering",
+                    "type": "Engineering"
+                }, {
+                    "name": "Electrical and Electronics Engineering",
+                    "type": "Engineering"
+                }, {
+                    "name": "Environmental and Geological Engineer",
+                    "type": "Engineering"
+                }, {
+                    "name": "Industrial, Maufacturing and Mechanical Engineer",
+                    "type": "Engineering"
+                }, {
+                    "name": "General, Others",
+                    "type": "Engineering"
+                }, {
+                    "name": "Non-Profit  and Charity",
+                    "type": "Non-Profit Sector"
+                }, {
+                    "name": "Truck Driving ",
+                    "type": "Transportation and Warehousing (Logistics)"
+                }, {
+                    "name": "Car, Van, and Bus Driving",
+                    "type": "Transportation and Warehousing (Logistics)"
+                }, {
+                    "name": "Dispatch, Routing and Scheduling",
+                    "type": "Transportation and Warehousing (Logistics)"
+                }, {
+                    "name": "Receiving and Warehousing",
+                    "type": "Transportation and Warehousing (Logistics)"
+                }, {
+                    "name": "Equipment, Forklift and Crane Operator",
+                    "type": "Transportation and Warehousing (Logistics)"
+                }, {
+                    "name": "Writing/Editing/Language",
+                    "type": "Writing/Editing/Language"
+                }, {
+                    "name": "General Labor",
+                    "type": "General Labor"
+                }, {
+                    "name": "Hair Cutting & Styling",
+                    "type": "Beauty and Cosmetics"
+                }, {
+                    "name": "Cosmetics and Beauty",
+                    "type": "Beauty and Cosmetics"
+                }, {
+                    "name": "Assembly and Assembly Line",
+                    "type": "Manufacturing, Production and Assembly"
+                }, {
+                    "name": "Plant work",
+                    "type": "Manufacturing, Production and Assembly"
+                }, {
+                    "name": "Call Center and Technical Customer Support",
+                    "type": "Customer Support and Client Care"
+                }, {
+                    "name": "Reservation, Ticketing and Retail",
+                    "type": "Customer Support and Client Care"
+                }, {
+                    "name": "Research and Deveopment (All Fields)",
+                    "type": "Research and Development"
+                }, {
+                    "name": "Airport Security and Screening",
+                    "type": "Law Enforcement, Security, and Safety"
+                }, {
+                    "name": "Law Enforcement, Firefighting, and Rescue",
+                    "type": "Law Enforcement, Security, and Safety"
+                }, {
+                    "name": "Music",
+                    "type": "Arts: Films/Music/Fine/Performing"
+                }, {
+                    "name": "Films and Entertainment",
+                    "type": "Arts: Films/Music/Fine/Performing"
+                }, {
+                    "name": "Architecture and Interior Design",
+                    "type": "Creative and Design"
+                }, {
+                    "name": "Animation and Multimedia",
+                    "type": "Creative and Design"
+                }]
+
+            }, {
+                name: "Business and Enterpreneurship"
+            }, {
+                name: "Study and Reading",
+                subs: [{
+                    "name": "Exams and Certifications"
+                }, {
+                    "name": "Admissions"
+                }, {
+                    "name": "Tutoring"
+                }, {
+                    "name": "Foreign/International Students"
+                }, {
+                    "name": "Language and Speech"
+                }]
+            }, {
+                name: "Financial",
+                subs: [{
+                    "name": "Foreign Exchange"
+                }, {
+                    "name": "Stocks and Online Trading"
+                }, {
+                    "name": "Tax and Accounting"
+                }]
+            }, {
+                name: "Personal/Life",
+                subs: [{
+                    "name": "Behavior and Manners"
+                }, {
+                    "name": "Philosphy"
+                }, {
+                    "name": "Psych"
+                }]
+            }, {
+                name: "Health",
+                subs: [
+
+                    {
+                        "name": "Diet"
+                    }, {
+                        "name": "Fitness and Yoga"
+                    }, {
+                        "name": "Beauty"
+                    }
+                ]
+            }, {
+                name: "Healthcare",
+                subs: [
+
+                    {
+                        "name": "Childcare"
+                    }, {
+                        "name": "Senior Services"
+                    }, {
+                        "name": "Disabled/Special Needs"
+                    }, {
+                        "name": "Household Remedies"
+                    }
+                ]
+            }, {
+                name: "Sports",
+                subs: [{
+                    "name": "InDoor Sports"
+                }, {
+                    "name": "Outdoor Sports"
+                }]
+            }, {
+                name: "Dating",
+                subs: [{
+                    "name": "Kink"
+                }, {
+                    "name": "Friendship"
+                }, {
+                    "name": "Love"
+                }, {
+                    "name": "Romance"
+                }]
+            }, {
+                name: "Religion",
+                subs: [{
+                    "name": "Athiest"
+                }, {
+                    "name": "Spirit"
+                }, {
+                    "name": "Organized Religion"
+                }]
+            }, {
+                name: "Relationships/Marriage",
+                subs: [{
+                    "name": "Divorce"
+                }, {
+                    "name": "Abuse and Domestic Violence"
+                }, {
+                    "name": "Marriage"
+                }, {
+                    "name": "LGBT"
+                }]
+            }, {
+                name: "Computer Services",
+                subs: [{
+                    "name": "Software"
+                }, {
+                    "name": "Hardware"
+                }, {
+                    "name": "IT Training"
+                }]
+            }, {
+                name: "Immigration and Legal Services",
+                subs: [{
+                    "name": "Immigration"
+                }, {
+                    "name": "Human Rights"
+                }, {
+                    "name": "Legal Services"
+                }]
+            }, {
+                name: "Charity and Volunteering",
+                subs: [{
+                    "name": "Non-Profit Organizations"
+                }, {
+                    "name": "Charity Events"
+                }, {
+                    "name": "Donation"
+                }, {
+                    "name": "Grants"
+                }]
+            }, {
+                name: "Household",
+                subs: [{
+                    "name": "Garden"
+                }, {
+                    "name": "Moving and Storage"
+                }, {
+                    "name": "Cleaning and Decoration"
+                }]
+            }, {
+                name: "Auto/Bikes/Boats",
+                subs: [{
+                    "name": "Bicycles"
+                }, {
+                    "name": "Motorcycles"
+                }, {
+                    "name": "Auto/Trucks"
+                }, {
+                    "name": "Boats"
+                }]
+            }, {
+                name: "Environment",
+                subs: [{
+                    "name": "Ecofriendly/Green"
+                }]
+            }, {
+                name: "Media/Music",
+                subs: [{
+                    "name": "Music"
+                }, {
+                    "name": "Films"
+                }, {
+                    "name": "Gaming"
+                }, {
+                    "name": "Video/Audio"
+                }]
+            }, {
+                name: "Food",
+                subs: [{
+                    "name": "Wine/Spirits"
+                }, {
+                    "name": "Vegan"
+                }, {
+                    "name": "Organic"
+                }]
+            }, {
+                name: "Animals / Pets",
+                subs: [{
+                    "name": "Pet Food"
+                }, {
+                    "name": "Animal/Pet Services"
+                }, {
+                    "name": "Supplies and Accessories"
+                }, {
+                    "name": "Livestock"
+                }]
+            }, {
+                name: "Parenting and Seniors",
+                subs: [{
+                    "name": "Parenting"
+                }, {
+                    "name": "Seniors/Old age"
+                }]
+            }, {
+                name: "Leisure",
+                subs: [{
+                    "name": "Photography"
+                }, {
+                    "name": "Outdoor"
+                }, {
+                    "name": "Events"
+                }, {
+                    "name": "Travel/Vacations"
+                }, {
+                    "name": "Wedding"
+                }, {
+                    "name": "Antiques & Collectibles"
+                }]
+            }, {
+                name: "Housing",
+                subs: [{
+                    "name": "Bur or sell House/Land"
+                }, {
+                    "name": "Rentals"
+                }]
+            },
+
+        ];
+        $scope.areaChanged = function() {
+            console.log('$scope.user ', $scope.user.primary_area);
+            $timeout(function() {
+                jQuery('.selectpicker').selectpicker('refresh');
+
+            }, 0);
+        }
+    });
+    </script>
+</body>
+
+</html>
